@@ -88,6 +88,7 @@ button {
    1. Top Utility Bar & Sticky Main Header
    ========================================================================== */
 .utility-bar {
+  display: none !important; /* Compulsory header starts cleanly at top matching reference image */
   background-color: var(--forest-950);
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.72rem;
@@ -231,6 +232,79 @@ button {
   height: 2px;
   background-color: var(--forest-900);
   border-radius: 2px;
+}
+
+/* ==========================================================================
+   Secondary Section Navigation Bar (Standalone minimal nav — matches image)
+   ========================================================================== */
+.section-nav-bar {
+  background-color: var(--bg-ivory);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 74px; /* height of .header-inner — sits just below sticky main header */
+  z-index: 90;
+}
+
+.section-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+}
+
+.snav-item {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-500);
+  padding: 18px 28px 18px;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.snav-item:first-child {
+  padding-left: 28px;
+}
+
+.snav-item:hover {
+  color: var(--forest-900);
+}
+
+.snav-item.active {
+  font-weight: 700;
+  color: var(--forest-950);
+}
+
+.snav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 3px;
+  background-color: var(--forest-900);
+  border-radius: 2px 2px 0 0;
+}
+
+.snav-item:first-child.active::after {
+  left: 24px;
+  right: 24px;
+}
+
+@media (max-width: 680px) {
+  .section-nav-bar {
+    display: none;
+  }
 }
 
 /* Search Bar */
@@ -419,6 +493,60 @@ button {
 
 .btn-artisan-studio:hover {
   background-color: var(--forest-700);
+  transform: translateY(-1px);
+}
+
+.btn-user-login {
+  background-color: #FFFFFF;
+  color: var(--forest-900);
+  border: 1px solid var(--border-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-user-login:hover {
+  background-color: var(--forest-900);
+  color: #FFFFFF;
+  border-color: var(--forest-900);
+  transform: translateY(-1px);
+}
+
+.btn-user-login.logged-in {
+  background-color: #EAF5EE;
+  color: #155B33;
+  border-color: #B7DBC3;
+}
+
+.btn-seller-login {
+  background-color: rgba(17, 42, 32, 0.08);
+  color: var(--forest-900);
+  border: 1px solid var(--border-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-seller-login:hover {
+  background-color: var(--forest-900);
+  color: #FFFFFF;
+  border-color: var(--forest-900);
   transform: translateY(-1px);
 }
 
@@ -803,27 +931,32 @@ button {
 .verification-pills-box {
   background-color: var(--bg-ivory);
   border: 1px solid var(--border-light);
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  cursor: default;
+  user-select: none;
 }
 
-.verify-pill-btn {
+.verify-pill-badge {
   font-size: 0.72rem;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 999px;
   background-color: #FFFFFF;
   color: var(--text-700);
   border: 1px solid var(--border-light);
-  transition: all 0.2s;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  user-select: none;
 }
 
-.verify-pill-btn.active,
-.verify-pill-btn:hover {
+.verify-pill-badge.active {
   background-color: var(--forest-900);
   color: #FFFFFF;
   border-color: var(--forest-900);
@@ -839,21 +972,19 @@ button {
   background-color: var(--bg-ivory);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 24px 22px;
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  cursor: pointer;
+  cursor: default;
   text-align: left;
+  user-select: none;
 }
 
-.verify-step-card:hover,
 .verify-step-card.highlighted {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--forest-700);
+  border: 1.5px solid var(--forest-900);
   background-color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(17, 42, 32, 0.08);
 }
 
 .verify-card-top {
@@ -873,7 +1004,7 @@ button {
 .verify-step-icon {
   width: 34px;
   height: 34px;
-  border-radius: 8px;
+  border-radius: 50%;
   background-color: #FFFFFF;
   border: 1px solid var(--border-light);
   display: flex;
@@ -1231,22 +1362,28 @@ button {
 .category-pills-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .cat-pill-btn {
-  padding: 7px 15px;
+  padding: 9px 24px;
   border-radius: 999px;
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 500;
   background-color: #FFFFFF;
-  color: var(--text-700);
-  border: 1px solid var(--border-light);
-  transition: all 0.15s;
+  color: #173426;
+  border: 1.5px solid #E2DCD0;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  line-height: 1.2;
 }
 
-.cat-pill-btn:hover,
+.cat-pill-btn:hover {
+  border-color: var(--forest-900);
+  color: var(--forest-900);
+}
+
 .cat-pill-btn.active {
   background-color: var(--forest-900);
   color: #FFFFFF;
@@ -1529,6 +1666,74 @@ button {
 
 .btn-acquire:hover {
   background-color: var(--forest-700);
+}
+
+.product-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-card-cart,
+.btn-card-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 8px;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.btn-card-cart {
+  background-color: var(--forest-50);
+  color: var(--forest-900);
+  border-color: var(--forest-700);
+}
+
+.btn-card-cart:hover {
+  background-color: var(--forest-900);
+  color: #FFFFFF;
+  border-color: var(--forest-900);
+}
+
+.btn-card-buy {
+  background-color: var(--gold-500);
+  color: var(--forest-950);
+  border-color: var(--gold-600);
+  font-weight: 700;
+}
+
+.btn-card-buy:hover {
+  background-color: var(--gold-400);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(182, 141, 44, 0.28);
+}
+
+.btn-card-cart:active,
+.btn-card-buy:active {
+  transform: translateY(0);
+}
+
+.btn-card-cart .btn-icon,
+.btn-card-buy .btn-icon {
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+@media (max-width: 1240px) and (min-width: 1025px) {
+  .product-card-actions {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
 }
 
 /* ==========================================================================
@@ -2046,6 +2251,481 @@ button {
   }
 }
 
+/* ==========================================================================
+   Seller & Patron Authentication Interface (Matches Reference Image)
+   ========================================================================== */
+.auth-modal-card {
+  max-width: 960px;
+  width: 95%;
+  max-height: 92vh;
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #D6E0D8;
+  box-shadow: 0 30px 80px rgba(11, 30, 22, 0.35);
+  background: #FFFFFF;
+}
+
+.auth-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  min-height: 560px;
+}
+
+/* Left Showcase Pane (Authentic Provenance) */
+.auth-banner-pane {
+  background-color: #EBF1EC;
+  padding: 42px 38px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #D9E4DC;
+  position: relative;
+}
+
+.auth-banner-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.auth-pill-guild {
+  background: #FFFFFF;
+  border: 1px solid rgba(17, 42, 32, 0.15);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #112A20;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.auth-dot-guild {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #112A20;
+  display: inline-block;
+}
+
+.auth-pill-gi {
+  background: #FAF5E6;
+  border: 1px solid #E6D49F;
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #B38628;
+}
+
+.auth-provenance-kicker {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #A6802E;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.auth-headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.85rem;
+  line-height: 1.12;
+  font-weight: 600;
+  color: #112A20;
+  margin: 0 0 16px;
+}
+
+.auth-headline-accent {
+  font-style: italic;
+  color: #B88A3B;
+  font-weight: 500;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.auth-description {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #475B50;
+  margin: 0 0 24px;
+}
+
+.auth-provenance-pill {
+  background: #FFFFFF;
+  border: 1px solid #D2DDD4;
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-size: 0.85rem;
+  color: #273A30;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.auth-shield-icon {
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.auth-banner-bottom {
+  margin-top: 32px;
+}
+
+.auth-evaluator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.auth-evaluator-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #A6802E;
+  text-transform: uppercase;
+}
+
+.auth-evaluator-sub {
+  font-size: 0.74rem;
+  color: #73867A;
+}
+
+.auth-demo-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.auth-demo-pill {
+  background: #FFFFFF;
+  border: 1px solid #CCD8CF;
+  border-radius: 999px;
+  padding: 7px 15px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #182C22;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.auth-demo-pill:hover {
+  border-color: #112A20;
+  background-color: #F6FAF7;
+  transform: translateY(-1px);
+}
+
+.auth-demo-dot {
+  font-size: 0.7rem;
+}
+
+.auth-demo-dot.buyer {
+  color: #112A20;
+}
+
+.auth-demo-dot.artisan {
+  color: #B88A3B;
+}
+
+/* Right Form Pane */
+.auth-form-pane {
+  background: #FFFFFF;
+  padding: 42px 44px 34px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.auth-modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #E0E7E2;
+  background: #FAFBF9;
+  color: #4A5D53;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 5;
+}
+
+.auth-modal-close-btn:hover {
+  background: #112A20;
+  color: #FFFFFF;
+  border-color: #112A20;
+}
+
+.auth-form-kicker {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #B08939;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.auth-welcome-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #112A20;
+  margin: 0 0 4px;
+  line-height: 1.15;
+}
+
+.auth-welcome-sub {
+  font-size: 0.92rem;
+  color: #63736A;
+  margin: 0 0 18px;
+}
+
+/* Role Selector Tabs */
+.auth-role-tabs {
+  display: flex;
+  background: #F3F6F3;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #E1E8E2;
+}
+
+.auth-role-tab {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #586960;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.auth-role-tab.active {
+  background: #112A20;
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.auth-field-group {
+  margin-bottom: 15px;
+}
+
+.auth-field-label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #182C22;
+  margin-bottom: 6px;
+}
+
+.auth-input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border: 1px solid #D2DDD4;
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.auth-input-box:focus-within {
+  border-color: #112A20;
+  box-shadow: 0 0 0 3px rgba(17, 42, 32, 0.1);
+}
+
+.auth-input-prefix-icon {
+  padding-left: 14px;
+  color: #829288;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-text-input {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 12px 14px;
+  font-size: 0.92rem;
+  color: #112A20;
+  outline: none;
+  font-family: var(--font-sans);
+}
+
+.auth-eye-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0 14px;
+  color: #75867C;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+
+.auth-eye-toggle-btn:hover {
+  color: #112A20;
+}
+
+.auth-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0 20px;
+  font-size: 0.84rem;
+}
+
+.auth-remember-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #4A5D53;
+  cursor: pointer;
+}
+
+.auth-forgot-link {
+  color: #112A20;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-forgot-link:hover {
+  text-decoration: underline;
+  color: #B08939;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  background: #112A20;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 0.96rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px rgba(17, 42, 32, 0.22);
+  letter-spacing: 0.02em;
+}
+
+.auth-submit-btn:hover {
+  background: #0B1E16;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(17, 42, 32, 0.3);
+}
+
+.auth-btn-arrow {
+  transition: transform 0.2s;
+}
+
+.auth-submit-btn:hover .auth-btn-arrow {
+  transform: translateX(4px);
+}
+
+.auth-footer-prompt {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #63736A;
+  margin: 16px 0 0;
+}
+
+.auth-footer-prompt a {
+  color: #112A20;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-footer-prompt a:hover {
+  text-decoration: underline;
+}
+
+.auth-guarantee-card {
+  background: #F4F8F5;
+  border: 1px solid #DCE5DE;
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-guarantee-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #FAF5E6;
+  border: 1px solid #E4D29C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.auth-guarantee-heading {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #112A20;
+  margin-bottom: 2px;
+}
+
+.auth-guarantee-sub {
+  font-size: 0.78rem;
+  color: #63736A;
+  line-height: 1.4;
+}
+
+@media (max-width: 860px) {
+  .auth-modal-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-banner-pane {
+    padding: 28px 24px;
+    border-right: none;
+    border-bottom: 1px solid #D9E4DC;
+  }
+  .auth-form-pane {
+    padding: 28px 24px;
+  }
+}
+
 @media print {
   .utility-bar, .site-header, .hero-section, .verification-section,
   .guilds-section, .spotlight-section, .marketplace-section,
@@ -2063,5 +2743,3 @@ button {
     max-height: none;
   }
 }
-
-  

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HunarLink — Valley Craft Guild | GI-Certified Kashmiri Handicrafts Marketplace</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.css">
 </head>
+
 <body>
 
   <!-- 1. Top Utility Bar -->
   <div class="utility-bar">
     <div class="container utility-inner">
       <div class="utility-left">
-        <span><span class="utility-dot"></span> GI-Certified Jammu &amp; Kashmir Handicrafts • Direct Artisan Loom Marketplace</span>
+        <span><span class="utility-dot"></span> GI-Certified Jammu &amp; Kashmir Handicrafts • Direct Artisan Loom
+          Marketplace</span>
       </div>
       <div class="utility-actions">
-        <button type="button" class="utility-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">🛡️ Verify GI Tag</button>
+        <button type="button" class="utility-link-btn" onclick="openSellerLoginModal('artisan')">🔑 Seller
+          Login</button>
+        <button type="button" class="utility-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">🛡️ Verify GI
+          Tag</button>
         <button type="button" class="utility-link-btn" onclick="openOrdersModal()">📦 Track Orders</button>
         <button type="button" class="utility-link-btn" onclick="openCompareModal()">⚖️ Compare Crafts</button>
         <button type="button" class="utility-link-btn" onclick="resetDemoStorage()">↺ Reset Demo</button>
@@ -29,21 +37,14 @@
   <!-- Sticky Main Header -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <button type="button" class="brand-logo" id="brand-home-trigger" onclick="resetAllFilters(); window.scrollTo({top:0, behavior:'smooth'})">
+      <button type="button" class="brand-logo" id="brand-home-trigger"
+        onclick="resetAllFilters(); window.scrollTo({top:0, behavior:'smooth'})">
         <span class="brand-emblem">H</span>
         <span class="brand-text-wrap">
           <span class="brand-title">HunarLink</span>
           <span class="brand-subtitle">J&amp;K Artisans Network </span>
         </span>
       </button>
-
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <button type="button" class="nav-item-btn active" onclick="window.scrollTo({top:0, behavior:'smooth'})">Home</button>
-        <button type="button" class="nav-item-btn" onclick="document.getElementById('craft-guilds-section').scrollIntoView({behavior:'smooth'})">Our Artisans </button>
-        <button type="button" class="nav-item-btn" onclick="document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">Valley Verification Flow</button>
-        <button type="button" class="nav-item-btn" onclick="document.getElementById('marketplace-section').scrollIntoView({behavior:'smooth'})">J&K Heritage Store</button>
-        <button type="button" class="nav-item-btn" onclick="document.getElementById('b2b-wholesale-section').scrollIntoView({behavior:'smooth'})">Wholesale</button>
-      </nav>
 
       <!-- Live Search Bar -->
       <div class="header-search-wrap">
@@ -52,35 +53,61 @@
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
-          <input type="text" id="global-search-input" class="header-search-input" placeholder="Search craft, artisan, GI ID...">
+          <input type="text" id="global-search-input" class="header-search-input"
+            placeholder="Search craft, artisan, GI ID...">
           <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear Search">✕</button>
         </div>
         <div id="search-suggestions" class="search-suggestions-dropdown"></div>
       </div>
 
-      <!-- Right Controls: Wishlist, Cart, Artisan Studio, Profile -->
+      <!-- Right Controls: Wishlist, Cart, User, Seller, Artisan Studio, Profile -->
       <div class="header-controls">
-        <button type="button" class="icon-badge-btn" id="wishlist-btn" onclick="toggleDrawer('wishlist-drawer', true)" aria-label="Open Wishlist">
+        <button type="button" class="icon-badge-btn" id="wishlist-btn" onclick="toggleDrawer('wishlist-drawer', true)"
+          aria-label="Open Wishlist">
           <span>♡</span>
-          <span class="badge-counter" id="wishlist-count">2</span>
+          <span class="badge-counter" id="wishlist-count">3</span>
         </button>
 
-        <button type="button" class="icon-badge-btn" id="cart-btn" onclick="toggleDrawer('cart-drawer', true)" aria-label="Open Shopping Bag">
+        <button type="button" class="icon-badge-btn" id="cart-btn" onclick="toggleDrawer('cart-drawer', true)"
+          aria-label="Open Shopping Bag">
           <span>🛍️</span>
-          <span class="badge-counter gold" id="cart-count">1</span>
+          <span class="badge-counter gold" id="cart-count">0</span>
+        </button>
+
+        <button type="button" class="btn-user-login logged-in" id="user-login-btn" onclick="handleUserLoginClick()"
+          title="User &amp; Collector Profile">
+          <span>👤</span> <span id="user-login-text">Priya</span>
+        </button>
+
+        <button type="button" class="btn-seller-login" id="seller-login-btn" onclick="handleSellerLoginClick()"
+          title="Seller &amp; Artisan Portal Sign In">
+          <span>🔑</span> <span id="seller-login-text">Seller Login</span>
         </button>
 
         <button type="button" class="btn-artisan-studio" id="artisan-studio-btn" onclick="openArtisanStudioModal()">
-          <span>✦</span> Artisan Studio
+          <span>✦</span> ARTISAN STUDIO
         </button>
 
         <div class="profile-dropdown-wrap">
-          <button type="button" class="profile-avatar-btn" id="profile-menu-btn" aria-label="Collector Profile Menu">AV</button>
+          <button type="button" class="profile-avatar-btn" id="profile-menu-btn"
+            aria-label="Collector Profile Menu">PS</button>
           <div class="profile-menu" id="profile-menu">
             <div class="profile-menu-header">
-              <div class="profile-menu-name">Demo Collector</div>
+              <div class="profile-menu-name">Priya Sharma</div>
               <div class="profile-menu-role">Verified Valley Collector • J&amp;K</div>
             </div>
+            <a href="auth.html?mode=login&amp;role=buyer" class="profile-menu-item" style="text-decoration: none;">
+              <span>🛍️ Buyer / Collector Login</span>
+              <span>→</span>
+            </a>
+            <a href="auth.html?mode=login&amp;role=artisan" class="profile-menu-item" style="text-decoration: none;">
+              <span>🔨 Artisan &amp; Seller Portal</span>
+              <span>→</span>
+            </a>
+            <a href="auth.html?mode=register&amp;role=buyer" class="profile-menu-item" style="text-decoration: none;">
+              <span>✨ Create New Account</span>
+              <span>→</span>
+            </a>
             <button type="button" class="profile-menu-item" onclick="openOrdersModal()">
               <span>📦 My Orders &amp; Live Tracking</span>
               <span>→</span>
@@ -97,11 +124,34 @@
               <span>↺ Reset Demo Catalog</span>
               <span>→</span>
             </button>
+            <button type="button" class="profile-menu-item" id="btn-profile-signout" onclick="logoutUser()" style="display: none; color: #D32F2F; border-top: 1px solid var(--border-light);">
+              <span>🚪 Sign Out</span>
+              <span>→</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Secondary Section Navigation Bar -->
+  <nav class="section-nav-bar" id="section-nav-bar" aria-label="Section Navigation">
+    <div class="container section-nav-inner">
+      <button type="button" class="snav-item active" id="snav-home"
+        onclick="snav_setActive('snav-home'); window.scrollTo({top:0, behavior:'smooth'})">Home</button>
+      <button type="button" class="snav-item" id="snav-artisans"
+        onclick="snav_setActive('snav-artisans'); document.getElementById('craft-guilds-section').scrollIntoView({behavior:'smooth'})">Our
+        Artisans</button>
+      <button type="button" class="snav-item" id="snav-verify"
+        onclick="snav_setActive('snav-verify'); document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">Valley
+        Verification Flow</button>
+      <button type="button" class="snav-item" id="snav-store"
+        onclick="snav_setActive('snav-store'); document.getElementById('marketplace-section').scrollIntoView({behavior:'smooth'})">J&amp;K
+        Heritage Store</button>
+      <button type="button" class="snav-item" id="snav-wholesale"
+        onclick="snav_setActive('snav-wholesale'); document.getElementById('b2b-wholesale-section').scrollIntoView({behavior:'smooth'})">Wholesale</button>
+    </div>
+  </nav>
 
   <!-- 2. Hero Showcase Section -->
   <section class="hero-section" id="hero-section">
@@ -117,14 +167,18 @@
             Explore Timeless <em>Indian Crafts</em>
           </h1>
           <p class="hero-subtitle">
-            Discover authentic handmade treasures from the valleys of Kashmir &amp; the heart of India. Direct from generational master looms to your sanctuary.
+            Discover authentic handmade treasures from the valleys of Jammu &amp; Kashmir the heart of India. Direct
+            from
+            generational master looms to your sanctuary.
           </p>
           <div class="hero-cta-row">
-            <button type="button" class="btn-primary-forest" id="hero-explore-btn" onclick="document.getElementById('marketplace-section').scrollIntoView({behavior:'smooth'})">
+            <button type="button" class="btn-primary-forest" id="hero-explore-btn"
+              onclick="document.getElementById('marketplace-section').scrollIntoView({behavior:'smooth'})">
               <span>Explore Crafts</span>
               <span>→</span>
             </button>
-            <button type="button" class="btn-outline-ivory" id="hero-verify-btn" onclick="openGiVerifyModal('GI-JK-PASH-8810')">
+            <button type="button" class="btn-outline-ivory" id="hero-verify-btn"
+              onclick="openGiVerifyModal('GI-JK-PASH-8810')">
               <span>🛡️</span>
               <span>Verify GI Tag / QR</span>
             </button>
@@ -134,14 +188,15 @@
             <img src="assets/image_1.jpg" alt="Registered Kashmiri Artisans" class="proof-thumb">
             <div>
               <div class="proof-title">2,400+ Registered Artisans</div>
-              <div class="proof-sub">Direct payout to geo-verified workshops across Srinagar, Budgam &amp; Anantnag</div>
+              <div class="proof-sub">Direct payout to geo-verified workshops across Srinagar, Budgam &amp; Anantnag
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Right 3-Card Bento Collage -->
         <div class="hero-bento">
-          <button type="button" class="bento-card bento-main" onclick="openProductModal('hl-pash-005')">
+          <button type="button" class="bento-card bento-main" onclick="openProductPage('hl-pash-005')">
             <img src="assets/image_2.jpg" alt="Jamawar Heirloom Stole">
             <div class="bento-overlay">
               <span class="bento-top-pill">✓ GI Certified Loom #108 • ₹76,000</span>
@@ -152,7 +207,7 @@
             </div>
           </button>
 
-          <button type="button" class="bento-card" onclick="openProductModal('hl-waln-007')">
+          <button type="button" class="bento-card" onclick="openProductPage('hl-waln-007')">
             <img src="assets/image_3.jpg" alt="Walnut Wood Lattice Carving">
             <div class="bento-overlay">
               <span class="bento-top-pill">GI Walnut</span>
@@ -163,7 +218,7 @@
             </div>
           </button>
 
-          <button type="button" class="bento-card" onclick="openProductModal('hl-papr-008')">
+          <button type="button" class="bento-card" onclick="openProductPage('hl-papr-008')">
             <img src="assets/image_4.jpg" alt="Persian Guldan Papier-Mache">
             <div class="bento-overlay">
               <span class="bento-top-pill">24K Naqash</span>
@@ -178,7 +233,8 @@
 
       <!-- 4-KPI Trust Bar -->
       <div class="trust-bar">
-        <button type="button" class="trust-item" onclick="document.getElementById('artisan-spotlight-section').scrollIntoView({behavior:'smooth'})">
+        <button type="button" class="trust-item"
+          onclick="document.getElementById('artisan-spotlight-section').scrollIntoView({behavior:'smooth'})">
           <div class="trust-icon-box">🏛️</div>
           <div>
             <div class="trust-value">2,400+</div>
@@ -194,7 +250,8 @@
           </div>
         </button>
 
-        <button type="button" class="trust-item" onclick="document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">
+        <button type="button" class="trust-item"
+          onclick="document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">
           <div class="trust-icon-box">🔬</div>
           <div>
             <div class="trust-value">3-Layer GI</div>
@@ -218,21 +275,23 @@
     <div class="container">
       <div class="section-header-split">
         <div>
-          <div class="section-kicker">🛡 AUTHENTICITY ARCHITECTURE</div>
+          <div class="section-kicker">◇ 100% GENUINE CRAFT PROMISE</div>
           <h2 class="section-title">The Valley Verification Flow</h2>
           <p class="section-desc">
-            Every heirloom undergoes a strict three-tier verification protocol before leaving the valley, combining geo-tagged loom telemetry, micron purity lab testing, and cryptographic GI sealing.
+            Every Crafts undergoes a strict three-tier verification protocol before leaving J&amp;K , combining
+            geo-tagged ,
+            micron purity lab testing, and cryptographic GI sealing.
           </p>
         </div>
         <div class="verification-pills-box">
-          <button type="button" class="verify-pill-btn active" onclick="openGiVerifyModal('GI-JK-PASH-8821')">● Level 1: GI QR Check</button>
-          <button type="button" class="verify-pill-btn" onclick="openGiVerifyModal('GI-JK-KANI-9904')">● Level 2: AI Vision Scan</button>
-          <button type="button" class="verify-pill-btn" onclick="openGiVerifyModal('GI-JK-SILK-7712')">● Level 3: Live Admin Audit</button>
+          <span class="verify-pill-badge active"><span class="verify-pill-dot">●</span> Level 1: GI QR Check</span>
+          <span class="verify-pill-badge"><span class="verify-pill-dot">●</span> Level 2: AI Vision Scan</span>
+          <span class="verify-pill-badge"><span class="verify-pill-dot">●</span> Level 3: Live Admin Audit</span>
         </div>
       </div>
 
       <div class="verification-cards-grid">
-        <button type="button" class="verify-step-card" onclick="openGiVerifyModal('GI-JK-PASH-8821')">
+        <div class="verify-step-card">
           <div>
             <div class="verify-card-top">
               <span class="verify-step-num">01</span>
@@ -240,21 +299,22 @@
             </div>
             <h3 class="verify-step-title">Artisan Geo-Verification</h3>
             <p class="verify-step-body">
-              Each piece is logged at its loom of origin across Srinagar, Budgam, and Anantnag clusters with GPS telemetry, master artisan registry credentials, and generational workshop lineage mapping.
+              Each piece is logged at its loom of origin across Srinagar, Budgam, and Anantnag clusters with GPS
+              telemetry, master artisan registry credentials, and generational workshop lineage mapping.
             </p>
           </div>
           <div class="verify-meter-box">
             <div class="verify-meter-labels">
-              <span>Artisan Cluster Telemetry</span>
-              <span>Srinagar &amp; Budgam • 100%</span>
+              <span>ARTISAN CLUSTER TELEMETRY</span>
+              <span>SRINAGAR &amp; BUDGAM • 100%</span>
             </div>
             <div class="verify-meter-bar">
               <div class="verify-meter-fill" style="width: 100%;"></div>
             </div>
           </div>
-        </button>
+        </div>
 
-        <button type="button" class="verify-step-card highlighted" onclick="openGiVerifyModal('GI-JK-KANI-9904')">
+        <div class="verify-step-card highlighted">
           <div>
             <div class="verify-card-top">
               <span class="verify-step-num">02</span>
@@ -262,21 +322,22 @@
             </div>
             <h3 class="verify-step-title">Material Purity Lab Review</h3>
             <p class="verify-step-body">
-              High-resolution macro weave &amp; fiber diameter testing verifies authentic sub-16-micron Ladakhi Changthangi fleece, pure mulberry silk knot density, and organic mineral dye composition.
+              High-resolution macro weave &amp; fiber diameter testing verifies authentic sub-16-micron Ladakhi
+              Changthangi fleece, pure mulberry silk knot density, and organic mineral dye composition.
             </p>
           </div>
           <div class="verify-meter-box">
             <div class="verify-meter-labels">
-              <span>Sub-16µm Pashmina Standard</span>
-              <span>99.4% Purity Verified</span>
+              <span>SUB-16MM PASHMINA STANDARD</span>
+              <span>99.4% PURITY VERIFIED</span>
             </div>
             <div class="verify-meter-bar">
               <div class="verify-meter-fill" style="width: 96%;"></div>
             </div>
           </div>
-        </button>
+        </div>
 
-        <button type="button" class="verify-step-card" onclick="openGiVerifyModal('GI-JK-SILK-7712')">
+        <div class="verify-step-card">
           <div>
             <div class="verify-card-top">
               <span class="verify-step-num">03</span>
@@ -284,19 +345,20 @@
             </div>
             <h3 class="verify-step-title">GI Tag &amp; Laser Seal</h3>
             <p class="verify-step-body">
-              Approved treasures receive a tamper-evident Geographical Indication laser seal and an immutable Digital Craft Passport that collectors can scan anytime to verify provenance.
+              Approved treasures receive a tamper-evident Geographical Indication laser seal and an immutable Digital
+              Craft Passport that collectors can scan anytime to verify provenance.
             </p>
           </div>
           <div class="verify-meter-box">
             <div class="verify-meter-labels">
-              <span>GI Registry Cross-Check</span>
-              <span>Tamper-Proof QR Seal</span>
+              <span>GI REGISTRY CROSS-CHECK</span>
+              <span>TAMPER-PROOF QR SEAL</span>
             </div>
             <div class="verify-meter-bar">
               <div class="verify-meter-fill gold" style="width: 100%;"></div>
             </div>
           </div>
-        </button>
+        </div>
       </div>
     </div>
   </section>
@@ -310,12 +372,14 @@
           <h2 class="section-title">Curated Craft Guilds</h2>
         </div>
         <p class="section-desc" style="margin-top: 0;">
-          Explore specialized guilds preserving centuries-old valley craftsmanship. Click any guild card below to filter the live marketplace catalog.
+          Explore specialized guilds preserving centuries-old valley craftsmanship. Click any guild card below to filter
+          the live marketplace catalog.
         </p>
       </div>
 
       <div class="guilds-bento-grid">
-        <button type="button" class="guild-bento-card span-2" data-guild="pashmina" onclick="setCategoryFilter('pashmina', true)">
+        <button type="button" class="guild-bento-card span-2" data-guild="pashmina"
+          onclick="setCategoryFilter('pashmina', true)">
           <img src="assets/image_1.jpg" alt="Pashmina and Kani Shawls Guild">
           <div class="guild-bento-overlay">
             <span class="guild-top-tag">GI Registry #46 &amp; #51 • 840+ Looms</span>
@@ -323,21 +387,24 @@
               <div>
                 <div class="guild-card-kicker">Ladakhi Changthangi Fleece</div>
                 <div class="guild-card-title">Pashmina &amp; Kani Shawls</div>
-                <p class="guild-card-desc">Hand-spun sub-16-micron mountain cashmere woven on wooden foot looms with traditional Talim notation.</p>
+                <p class="guild-card-desc">Hand-spun sub-16-micron mountain cashmere woven on wooden foot looms with
+                  traditional Talim notation.</p>
               </div>
               <span class="guild-cta-pill">Explore Guild →</span>
             </div>
           </div>
         </button>
 
-        <button type="button" class="guild-bento-card" data-guild="silk-rugs" onclick="setCategoryFilter('silk-rugs', true)">
+        <button type="button" class="guild-bento-card" data-guild="silk-rugs"
+          onclick="setCategoryFilter('silk-rugs', true)">
           <img src="assets/image_5.jpg" alt="Silk-on-Silk Rugs Guild">
           <div class="guild-bento-overlay">
             <span class="guild-top-tag">Up to 900 Knots / Sq.In</span>
             <div>
               <div class="guild-card-kicker">Talim-Coded Medallion Carpets</div>
               <div class="guild-card-title">Silk-on-Silk Rugs</div>
-              <p class="guild-card-desc">Hand-knotted mulberry silk carpets from Srinagar &amp; Budgam looms. Discover Looms →</p>
+              <p class="guild-card-desc">Hand-knotted mulberry silk carpets from Srinagar &amp; Budgam looms. Discover
+                Looms →</p>
             </div>
           </div>
         </button>
@@ -349,19 +416,22 @@
             <div>
               <div class="guild-card-kicker">Anantnag &amp; Srinagar Tarkhans</div>
               <div class="guild-card-title">Walnut Woodcarving</div>
-              <p class="guild-card-desc">Seasoned 300-year-old walnut timber hand-chiseled with deep Chinar and Pinjrakari lattice relief.</p>
+              <p class="guild-card-desc">Seasoned 300-year-old walnut timber hand-chiseled with deep Chinar and
+                Pinjrakari lattice relief.</p>
             </div>
           </div>
         </button>
 
-        <button type="button" class="guild-bento-card" data-guild="papier-mache" onclick="setCategoryFilter('papier-mache', true)">
+        <button type="button" class="guild-bento-card" data-guild="papier-mache"
+          onclick="setCategoryFilter('papier-mache', true)">
           <img src="assets/image_4.jpg" alt="Papier-Mache Art Guild">
           <div class="guild-bento-overlay">
             <span class="guild-top-tag">24K Gold Leaf Naqash</span>
             <div>
               <div class="guild-card-kicker">Zadibal &amp; Budgam Workshops</div>
               <div class="guild-card-title">Papier-Mâché Art</div>
-              <p class="guild-card-desc">Hand-molded Sakhta pulp vessels illuminated with fine Hazara floral and Persian Guldan motifs.</p>
+              <p class="guild-card-desc">Hand-molded Sakhta pulp vessels illuminated with fine Hazara floral and Persian
+                Guldan motifs.</p>
             </div>
           </div>
         </button>
@@ -373,7 +443,8 @@
             <div>
               <div class="guild-card-kicker">Kanihama &amp; Old Srinagar</div>
               <div class="guild-card-title">Kani Jamawar &amp; Sozni</div>
-              <p class="guild-card-desc">Intricate wooden-bobbin Jamawar weaves and single-thread Sozni embroidery where reverse mirrors front.</p>
+              <p class="guild-card-desc">Intricate wooden-bobbin Jamawar weaves and single-thread Sozni embroidery where
+                reverse mirrors front.</p>
             </div>
           </div>
         </button>
@@ -401,7 +472,9 @@
           <h2 class="spotlight-name">Master Ghulam Qadir Mir</h2>
           <div class="spotlight-role">42 Years of Loom Mastery • 4th Generation Ustad</div>
           <blockquote class="spotlight-quote">
-            "A true Kani shawl is not woven with thread alone; it is sung into existence through the sacred Talim code. One wrong bobbin turn breaks a century of rhythm—that is why machines can copy our patterns, never our soul."
+            "A true Kani shawl is not woven with thread alone; it is sung into existence through the sacred Talim code.
+            One wrong bobbin turn breaks a century of rhythm—that is why machines can copy our patterns, never our
+            soul."
           </blockquote>
 
           <div class="spotlight-stats-row">
@@ -442,12 +515,11 @@
         </div>
 
         <div class="category-pills-row">
-          <button type="button" class="cat-pill-btn active" data-cat="all" onclick="setCategoryFilter('all')">All Pieces</button>
-          <button type="button" class="cat-pill-btn" data-cat="pashmina" onclick="setCategoryFilter('pashmina')">Pashmina</button>
-          <button type="button" class="cat-pill-btn" data-cat="walnut" onclick="setCategoryFilter('walnut')">Walnut</button>
-          <button type="button" class="cat-pill-btn" data-cat="papier-mache" onclick="setCategoryFilter('papier-mache')">Papier-Mâché</button>
-          <button type="button" class="cat-pill-btn" data-cat="silk-rugs" onclick="setCategoryFilter('silk-rugs')">Silk Rugs</button>
-          <button type="button" class="cat-pill-btn" data-cat="sozni" onclick="setCategoryFilter('sozni')">Kani &amp; Sozni</button>
+          <button type="button" class="cat-pill-btn" data-cat="pashmina" onclick="toggleCategoryFilter('pashmina')">Pashmina</button>
+          <button type="button" class="cat-pill-btn" data-cat="walnut" onclick="toggleCategoryFilter('walnut')">Walnut</button>
+          <button type="button" class="cat-pill-btn" data-cat="papier-mache" onclick="toggleCategoryFilter('papier-mache')">Papier-Mâché</button>
+          <button type="button" class="cat-pill-btn" data-cat="silk-rugs" onclick="toggleCategoryFilter('silk-rugs')">Silk Rugs</button>
+          <button type="button" class="cat-pill-btn" data-cat="sozni" onclick="toggleCategoryFilter('sozni')">Kani &amp; Sozni</button>
         </div>
       </div>
 
@@ -458,7 +530,8 @@
             <span>Max Price</span>
             <span id="price-slider-val">Up to ₹1,25,000</span>
           </label>
-          <input type="range" id="price-range-slider" class="filter-range" min="14000" max="125000" step="1000" value="125000">
+          <input type="range" id="price-range-slider" class="filter-range" min="14000" max="125000" step="1000"
+            value="125000">
         </div>
 
         <div class="filter-group">
@@ -506,12 +579,26 @@
         <div class="results-summary-text" id="results-summary">Showing 8 of 8 GI-Certified Valley Treasures</div>
         <div class="active-chips-wrap">
           <div id="active-filter-chips" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
-          <button type="button" class="btn-reset-filters" id="clear-filters-btn" onclick="resetAllFilters()">Reset All Filters</button>
+          <button type="button" class="btn-reset-filters" id="clear-filters-btn" onclick="resetAllFilters()">Reset All
+            Filters</button>
         </div>
       </div>
 
       <!-- Dynamic Product Cards Grid -->
       <div class="product-grid" id="product-grid"></div>
+
+      <!-- Recently Viewed Section (Home Page) -->
+      <div id="home-recent-wrapper"
+        style="margin-top: 48px; border-top: 1px solid var(--border-light); padding-top: 36px; display: none;">
+        <div class="section-header-split">
+          <div>
+            <div class="section-kicker">YOUR DISCOVERY TRAIL</div>
+            <h2 class="section-title">Recently Viewed Heirlooms</h2>
+          </div>
+          <button type="button" class="btn-reset-filters" onclick="clearRecentlyViewed()">Clear History</button>
+        </div>
+        <div class="product-grid" id="home-recent-grid"></div>
+      </div>
     </div>
   </section>
 
@@ -523,7 +610,9 @@
           <span class="b2b-pill">🏛️ B2B Hospitality &amp; Architectural Trade Portal</span>
           <h2 class="b2b-title">Bespoke Valley Lots for Luxury Hospitality &amp; Interior Architects</h2>
           <p class="b2b-desc">
-            Source authenticated Kashmiri silk carpets, carved walnut architectural screens, and heirloom textiles at direct guild pricing. Dedicated craft concierges manage custom dimensions, MOQ lot scheduling, and export-ready GI compliance certificates.
+            Source authenticated Kashmiri silk carpets, carved walnut architectural screens, and heirloom textiles at
+            direct guild pricing. Dedicated craft concierges manage custom dimensions, MOQ lot scheduling, and
+            export-ready GI compliance certificates.
           </p>
           <div class="b2b-perks-row">
             <span>📍 Direct Cluster Sourcing</span>
@@ -536,7 +625,8 @@
           <button type="button" class="btn-white-solid" id="request-wholesale-btn" onclick="openB2BModal()">
             📋 Request Wholesale Catalog
           </button>
-          <button type="button" class="btn-outline-dark" id="trade-concierge-btn" style="text-align: center; justify-content: center;" onclick="openB2BModal()">
+          <button type="button" class="btn-outline-dark" id="trade-concierge-btn"
+            style="text-align: center; justify-content: center;" onclick="openB2BModal()">
             💬 Speak to Trade Concierge
           </button>
         </div>
@@ -557,7 +647,8 @@
             </span>
           </div>
           <p class="footer-brand-desc">
-            Empowering Jammu &amp; Kashmir's master artisans by connecting geo-verified looms and carving guilds directly with discerning collectors and hospitality partners worldwide—with zero middleman cut.
+            Empowering Jammu &amp; Kashmir's master artisans by connecting geo-verified looms and carving guilds
+            directly with discerning collectors and hospitality partners worldwide—with zero middleman cut.
           </p>
           <div class="footer-badges-row">
             <span class="footer-mini-badge">✓ GI Certified Partner</span>
@@ -568,32 +659,48 @@
         <div>
           <div class="footer-col-title">Craft Guilds</div>
           <ul class="footer-links-list">
-            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('pashmina', true)">Pashmina &amp; Kani Shawls</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('walnut', true)">Walnut Wood Carving</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('papier-mache', true)">Papier-Mâché &amp; Naqash</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('silk-rugs', true)">Silk-on-Silk Carpets</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('sozni', true)">Sozni &amp; Jamawar Guild</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('pashmina', true)">Pashmina
+                &amp; Kani Shawls</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('walnut', true)">Walnut Wood
+                Carving</button></li>
+            <li><button type="button" class="footer-link-btn"
+                onclick="setCategoryFilter('papier-mache', true)">Papier-Mâché &amp; Naqash</button></li>
+            <li><button type="button" class="footer-link-btn"
+                onclick="setCategoryFilter('silk-rugs', true)">Silk-on-Silk Carpets</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="setCategoryFilter('sozni', true)">Sozni &amp;
+                Jamawar Guild</button></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">Artisan Lineage</div>
           <ul class="footer-links-list">
-            <li><button type="button" class="footer-link-btn" onclick="document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">Valley Verification Flow</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">GI Registry Lookup</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="filterByMasterUstad()">Master Ghulam Qadir Mir</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="openArtisanStudioModal()">Artisan Studio Onboarding</button></li>
-            <li><button type="button" class="footer-link-btn" onclick="openB2BModal()">B2B Hospitality Trade Desk</button></li>
+            <li><button type="button" class="footer-link-btn"
+                onclick="document.getElementById('verification-section').scrollIntoView({behavior:'smooth'})">Valley
+                Verification Flow</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">GI Registry
+                Lookup</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="filterByMasterUstad()">Master Ghulam Qadir
+                Mir</button></li>
+            <li><button type="button" class="footer-link-btn" onclick="openArtisanStudioModal()">Artisan Studio
+                Onboarding</button></li>
+            <li><a href="auth.html?mode=login&amp;role=buyer" class="footer-link-btn" style="text-decoration: none; display: inline-block;">Buyer &amp; Collector Login</a></li>
+            <li><a href="auth.html?mode=login&amp;role=artisan" class="footer-link-btn" style="text-decoration: none; display: inline-block;">Artisan &amp; Seller Workspace</a></li>
+            <li><a href="auth.html?mode=register&amp;role=artisan" class="footer-link-btn" style="text-decoration: none; display: inline-block;">Register as an Artisan</a></li>
+            <li><button type="button" class="footer-link-btn" onclick="openB2BModal()">B2B Hospitality Trade
+                Desk</button></li>
           </ul>
         </div>
 
         <div>
           <div class="footer-col-title">The Valley Chronicle</div>
           <p style="font-size: 0.78rem; color: var(--text-500);">
-            Receive seasonal dispatches on newly completed Kani loom pieces, GI lab monographs, and master artisan stories.
+            Receive seasonal dispatches on newly completed Kani loom pieces, GI lab monographs, and master artisan
+            stories.
           </p>
           <form class="newsletter-form" id="newsletter-form">
-            <input type="email" id="newsletter-email" class="newsletter-input" required placeholder="Enter collector email...">
+            <input type="email" id="newsletter-email" class="newsletter-input" required
+              placeholder="Enter collector email...">
             <button type="submit" class="btn-subscribe">Subscribe</button>
           </form>
         </div>
@@ -602,9 +709,12 @@
       <div class="footer-bottom-bar">
         <div>© 2026 HunarLink Valley Craft Guild (Team 16). All Rights Reserved.</div>
         <div class="footer-policy-links">
-          <button type="button" class="footer-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">GI Authenticity Charter</button>
-          <button type="button" class="footer-link-btn" onclick="openOrdersModal()">Insured Transit &amp; Escrow Policy</button>
-          <button type="button" class="footer-link-btn" onclick="openArtisanStudioModal()">Zero-Cut Artisan Pledge</button>
+          <button type="button" class="footer-link-btn" onclick="openGiVerifyModal('GI-JK-PASH-8821')">GI Authenticity
+            Charter</button>
+          <button type="button" class="footer-link-btn" onclick="openOrdersModal()">Insured Transit &amp; Escrow
+            Policy</button>
+          <button type="button" class="footer-link-btn" onclick="openArtisanStudioModal()">Zero-Cut Artisan
+            Pledge</button>
         </div>
       </div>
     </div>
@@ -647,8 +757,10 @@
   <!-- Product Comparison Floating Bar & Modal -->
   <div class="compare-floating-bar" id="compare-floating-bar">
     <span id="compare-bar-text" style="font-size: 0.82rem; font-weight: 600;">1 Craft Selected</span>
-    <button type="button" class="btn-gold" style="padding: 7px 14px; font-size: 0.74rem;" onclick="openCompareModal()">Compare Side-by-Side</button>
-    <button type="button" style="color: rgba(255,255,255,0.75); font-size: 0.74rem;" onclick="clearCompareList()">Clear</button>
+    <button type="button" class="btn-gold" style="padding: 7px 14px; font-size: 0.74rem;"
+      onclick="openCompareModal()">Compare Side-by-Side</button>
+    <button type="button" style="color: rgba(255,255,255,0.75); font-size: 0.74rem;"
+      onclick="clearCompareList()">Clear</button>
   </div>
 
   <div class="backdrop-overlay" id="compare-modal">
@@ -692,17 +804,23 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.84rem; color: var(--text-700); margin-bottom: 12px;">
-          Enter any HunarLink GI Registry code below (or select a sample code) to inspect its geo-tagged loom coordinates and micron purity certificate:
+          Enter any HunarLink GI Registry code below (or select a sample code) to inspect its geo-tagged loom
+          coordinates and micron purity certificate:
         </p>
         <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-          <input type="text" id="gi-lookup-input" value="GI-JK-PASH-8821" style="flex: 1; padding: 9px 12px; border: 1px solid var(--border-mid); border-radius: 6px;">
+          <input type="text" id="gi-lookup-input" value="GI-JK-PASH-8821"
+            style="flex: 1; padding: 9px 12px; border: 1px solid var(--border-mid); border-radius: 6px;">
           <button type="button" class="btn-primary-forest" onclick="runGiLookup()">Verify GI Seal</button>
         </div>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-          <button type="button" class="verify-pill-btn" onclick="document.getElementById('gi-lookup-input').value='GI-JK-PASH-8821'; runGiLookup();">GI-JK-PASH-8821</button>
-          <button type="button" class="verify-pill-btn" onclick="document.getElementById('gi-lookup-input').value='GI-JK-WALN-4402'; runGiLookup();">GI-JK-WALN-4402</button>
-          <button type="button" class="verify-pill-btn" onclick="document.getElementById('gi-lookup-input').value='GI-JK-KANI-9904'; runGiLookup();">GI-JK-KANI-9904</button>
-          <button type="button" class="verify-pill-btn" onclick="document.getElementById('gi-lookup-input').value='GI-JK-SILK-7712'; runGiLookup();">GI-JK-SILK-7712</button>
+          <button type="button" class="verify-pill-btn"
+            onclick="document.getElementById('gi-lookup-input').value='GI-JK-PASH-8821'; runGiLookup();">GI-JK-PASH-8821</button>
+          <button type="button" class="verify-pill-btn"
+            onclick="document.getElementById('gi-lookup-input').value='GI-JK-WALN-4402'; runGiLookup();">GI-JK-WALN-4402</button>
+          <button type="button" class="verify-pill-btn"
+            onclick="document.getElementById('gi-lookup-input').value='GI-JK-KANI-9904'; runGiLookup();">GI-JK-KANI-9904</button>
+          <button type="button" class="verify-pill-btn"
+            onclick="document.getElementById('gi-lookup-input').value='GI-JK-SILK-7712'; runGiLookup();">GI-JK-SILK-7712</button>
         </div>
         <div id="gi-lookup-result"></div>
       </div>
@@ -737,11 +855,13 @@
             </div>
             <div class="form-field full">
               <label>Custom Talim Inscription / Collector Initials &amp; Notes</label>
-              <textarea rows="3" required placeholder="Describe desired motif density, family crest initials, or target occasion..."></textarea>
+              <textarea rows="3" required
+                placeholder="Describe desired motif density, family crest initials, or target occasion..."></textarea>
             </div>
           </div>
           <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 10px;">
-            <button type="button" class="btn-outline-ivory" onclick="closeModal('custom-commission-modal')">Cancel</button>
+            <button type="button" class="btn-outline-ivory"
+              onclick="closeModal('custom-commission-modal')">Cancel</button>
             <button type="submit" class="btn-gold">Submit Commission to Srinagar Loom →</button>
           </div>
         </form>
@@ -772,7 +892,9 @@
             <input type="number" id="b2b-qty-input" min="10" max="250" value="15" oninput="updateB2BCalculator()">
           </div>
         </div>
-        <div id="b2b-quote-output" style="background: var(--bg-ivory); padding: 14px; border-radius: 8px; border: 1px solid var(--border-mid); margin-bottom: 16px;"></div>
+        <div id="b2b-quote-output"
+          style="background: var(--bg-ivory); padding: 14px; border-radius: 8px; border: 1px solid var(--border-mid); margin-bottom: 16px;">
+        </div>
 
         <form onsubmit="submitB2BQuote(event)">
           <div class="form-grid">
@@ -801,11 +923,13 @@
         <button type="button" class="drawer-close-btn" onclick="closeModal('artisan-studio-modal')">✕</button>
       </div>
       <div class="modal-body">
-        <div style="display: flex; justify-content: space-between; align-items: center; background: var(--forest-50); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--forest-600); margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; background: var(--forest-50); padding: 10px 14px; border-radius: 8px; border: 1px solid var(--forest-600); margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
           <div style="font-size: 0.78rem; color: var(--forest-900);">
             <strong>🎙️ Voice-First Seller Assist:</strong> Auto-fill craft details in Kashmiri, Urdu, or Hindi.
           </div>
-          <button type="button" class="btn-gold" style="padding: 6px 12px; font-size: 0.72rem;" onclick="simulateVoiceAutoFill()">
+          <button type="button" class="btn-gold" style="padding: 6px 12px; font-size: 0.72rem;"
+            onclick="simulateVoiceAutoFill()">
             🎙️ Simulate Voice Auto-Fill
           </button>
         </div>
@@ -865,9 +989,163 @@
     </div>
   </div>
 
+  <!-- Seller & Patron Authentication Modal (Matches reference design) -->
+  <div class="backdrop-overlay" id="seller-login-modal"
+    onclick="if(event.target===this)closeModal('seller-login-modal')">
+    <div class="modal-card auth-modal-card">
+      <div class="auth-modal-grid">
+        <!-- Left Showcase Pane (Authentic Provenance) -->
+        <div class="auth-banner-pane">
+          <div class="auth-banner-top">
+            <div class="auth-badges-row">
+              <span class="auth-pill-guild">
+                <span class="auth-dot-guild"></span> HEIRLOOM GUILD • KASHMIR
+              </span>
+              <span class="auth-pill-gi">GI REGISTRY NO. 46</span>
+            </div>
+
+            <div class="auth-provenance-kicker">— AUTHENTIC PROVENANCE</div>
+
+            <h2 class="auth-headline">
+              Every Craft<br>
+              <span class="auth-headline-accent">Has a Story.</span>
+            </h2>
+
+            <p class="auth-description">
+              Discover verified Kashmiri craftsmanship—from loom-woven shawls to intricate Sozni stitches—and directly
+              connect with the master artisans behind every creation.
+            </p>
+
+            <div class="auth-provenance-pill">
+              <span class="auth-shield-icon">🛡️</span>
+              <span class="auth-provenance-text">Direct patron access from <strong>Budgam</strong>,
+                <strong>Zadibal</strong> &amp; <strong>Kanihama</strong> ateliers</span>
+            </div>
+          </div>
+
+          <div class="auth-banner-bottom">
+            <div class="auth-evaluator-header">
+              <span class="auth-evaluator-title">⚡ QUICK EVALUATOR SIGN-IN - FILL</span>
+              <span class="auth-evaluator-sub">One-tap demo</span>
+            </div>
+            <div class="auth-demo-pills-row">
+              <button type="button" class="auth-demo-pill" onclick="quickFillAuth('buyer')">
+                <span class="auth-demo-dot buyer">●</span> Buyer Demo: Priya Sharma
+              </button>
+              <button type="button" class="auth-demo-pill" onclick="quickFillAuth('artisan')">
+                <span class="auth-demo-dot artisan">●</span> Artisan Demo: Ustad Mir
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form Pane -->
+        <div class="auth-form-pane">
+          <button type="button" class="auth-modal-close-btn" onclick="closeModal('seller-login-modal')"
+            aria-label="Close modal">✕</button>
+
+          <div>
+            <a href="auth.html?mode=login&amp;role=artisan" style="display: flex; align-items: center; justify-content: space-between; background: #FAF7F0; border: 1px solid #D5CBB9; border-radius: 8px; padding: 7px 12px; margin-bottom: 12px; font-size: 0.76rem; font-weight: 700; color: #112A20; text-decoration: none;">
+              <span>🚀 Prefer full-screen portal view?</span>
+              <span style="color: #195C38;">Open Auth Suite ↗</span>
+            </a>
+            <div class="auth-form-kicker">PATRON &amp; ARTISAN ACCESS</div>
+            <h3 class="auth-welcome-title">Welcome</h3>
+            <p class="auth-welcome-sub">Sign in to continue your authentic HunarLink journey.</p>
+
+            <!-- Role Selector Tabs -->
+            <div class="auth-role-tabs">
+              <button type="button" class="auth-role-tab active" id="auth-role-artisan"
+                onclick="setAuthRole('artisan')">
+                <span>✦</span> Seller / Artisan
+              </button>
+              <button type="button" class="auth-role-tab" id="auth-role-buyer" onclick="setAuthRole('buyer')">
+                <span>👤</span> Patron / Collector
+              </button>
+            </div>
+
+            <form id="seller-login-form" onsubmit="handleSellerLogin(event)">
+              <div class="auth-field-group">
+                <label class="auth-field-label" for="auth-email">Email Address</label>
+                <div class="auth-input-box">
+                  <span class="auth-input-prefix-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </span>
+                  <input type="email" id="auth-email" class="auth-text-input" placeholder="e.g. name@domain.com"
+                    required>
+                </div>
+              </div>
+
+              <div class="auth-field-group">
+                <label class="auth-field-label" for="auth-password">Password</label>
+                <div class="auth-input-box">
+                  <span class="auth-input-prefix-icon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                  </span>
+                  <input type="password" id="auth-password" class="auth-text-input" placeholder="••••••••••••" required>
+                  <button type="button" class="auth-eye-toggle-btn" id="auth-eye-toggle"
+                    onclick="togglePasswordVisibility()" aria-label="Toggle password visibility">
+                    <svg id="auth-eye-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="auth-options-row">
+                <label class="auth-remember-label">
+                  <input type="checkbox" id="auth-remember-check" checked>
+                  <span>Remember me</span>
+                </label>
+                <a href="javascript:void(0)" class="auth-forgot-link" onclick="handleForgotPassword()">Forgot
+                  Password?</a>
+              </div>
+
+              <button type="submit" class="auth-submit-btn" id="auth-submit-btn">
+                <span id="auth-submit-btn-text">Sign In to HunarLink</span>
+                <span class="auth-btn-arrow">→</span>
+              </button>
+            </form>
+
+            <div class="auth-footer-prompt">
+              New to HunarLink? <a href="javascript:void(0)" onclick="handleRegisterClick()">Create an Account</a>
+            </div>
+          </div>
+
+          <!-- Bottom GI Certified Origin Guarantee Card -->
+          <div class="auth-guarantee-card">
+            <div class="auth-guarantee-badge">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#B88A3B" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <div class="auth-guarantee-content">
+              <div class="auth-guarantee-heading">GI CERTIFIED ORIGIN GUARANTEE</div>
+              <div class="auth-guarantee-sub">Every artisan profile is physically authenticated in Jammu &amp; Kashmir.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification Container -->
   <div class="toast-stack" id="toast-container" aria-live="polite"></div>
 
   <script src="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.js"></script>
 </body>
+
 </html>
