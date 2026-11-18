@@ -6,9 +6,10 @@
    ========================================================================== */
 
 const IMG_MAP = {
-  jamawar: "assets/image_2.jpg",
+  jamawar: "assets/products/kani_01.jpg",
+  kani: "assets/products/kani_01.jpg",
   walnut: "assets/image_3.jpg",
-  papier: "assets/image_4.jpg",
+  papier: "assets/products/papier_01.jpg",
   ustad: "assets/image_1.jpg",
   silkrug: "assets/image_5.jpg",
   khudrang: "assets/image_6.jpg"
@@ -16,7 +17,7 @@ const IMG_MAP = {
 
 const SEED_PRODUCTS = [
 
-  /* ── PASHMINA (20 products) ─────────────────────────────────────────── */
+  /* ── PASHMINA (16 products) ─────────────────────────────────────────── */
   {
     id: "hl-pash-001", title: "Royal Khudrang Pashmina Shawl",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
@@ -148,50 +149,6 @@ const SEED_PRODUCTS = [
     loomHours: 1600, dimensions: "210 cm × 108 cm", stock: 1,
     image: "assets/products/pashmina_12.jpg",
     description: "A once-in-a-lifetime bridal pashmina embroidered edge-to-edge with 24K gold Zari thread Naqash motifs — presented in a heritage sandalwood box."
-  },
-  {
-    id: "hl-pash-013", title: "Pheran-Style Quilted Pashmina",
-    guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
-    artisan: "Master Gulam Hassan", district: "Anantnag",
-    price: 1490, mrp: 1820, rating: 4.7, reviewCount: 35,
-    giId: "GI-JK-PASH-8958", giLevel: 2,
-    purityMetric: "14.4 Micron • Kashmiri Pheran Quilted Lining",
-    loomHours: 510, dimensions: "120 cm × 90 cm (Quilted)", stock: 4,
-    image: "assets/products/pashmina_13.jpg",
-    description: "Inspired by the traditional Kashmiri Pheran winter garment — this quilted pashmina wrap provides heritage warmth in a modern luxury format."
-  },
-  {
-    id: "hl-pash-014", title: "Forest Green Herringbone Pashmina",
-    guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
-    artisan: "Ustad Firdous Ahmad", district: "Budgam",
-    price: 1150, mrp: 1450, rating: 4.6, reviewCount: 58,
-    giId: "GI-JK-PASH-8966", giLevel: 2,
-    purityMetric: "15.0 Micron • Herringbone Twill Structure",
-    loomHours: 240, dimensions: "200 cm × 98 cm", stock: 7,
-    image: "assets/products/pashmina_14.jpg",
-    description: "Understated forest green pashmina in classic herringbone twill — a gift of daily wearable heritage from Budgam's renowned weaving families."
-  },
-  {
-    id: "hl-pash-015", title: "Lotus Pink Sozni Shawl",
-    guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
-    artisan: "Ustadani Fatima Zargar", district: "Pulwama",
-    price: 1590, mrp: 1920, rating: 4.8, reviewCount: 32,
-    giId: "GI-JK-PASH-8974", giLevel: 3,
-    purityMetric: "14.2 Micron • Lotus & Vine Sozni Field Embroidery",
-    loomHours: 590, dimensions: "205 cm × 100 cm", stock: 4,
-    image: "assets/products/pashmina_15.jpg",
-    description: "Soft lotus pink pashmina adorned with full-field Sozni needle embroidery of trailing lotus and vine — stitched by valley women artisans over five months."
-  },
-  {
-    id: "hl-pash-016", title: "Undyed Raw Changthangi Pashmina",
-    guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
-    artisan: "Master Abdul Majid", district: "Leh-Ladakh",
-    price: 1740, mrp: 1990, rating: 4.9, reviewCount: 23,
-    giId: "GI-JK-PASH-8982", giLevel: 3,
-    purityMetric: "13.7 Micron Undyed • Direct Nomad Changthangi Source",
-    loomHours: 700, dimensions: "210 cm × 105 cm", stock: 2,
-    image: "assets/products/pashmina_16.jpg",
-    description: "Completely undyed, unprocessed natural Changthangi pashmina sourced directly from Ladakhi nomadic Changpa herders — raw valley luxury at its purest."
   },
   {
     id: "hl-pash-017", title: "Striped Regency Pashmina Stole",
@@ -465,7 +422,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-001", title: "Shahi Gulab-dan Urn",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Ali Mohammad", district: "Srinagar",
-    price: 14800, mrp: 18500, rating: 4.9, reviewCount: 54,
+    price: 850, mrp: 990, rating: 4.9, reviewCount: 54,
     giId: "GI-JK-PAPR-3109", giLevel: 2,
     purityMetric: "Hand-Pounded Sakhta Pulp • 24K Gold Leaf Naqash",
     loomHours: 140, dimensions: "32 cm H × 19 cm Dia", stock: 6,
@@ -476,7 +433,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-002", title: "Persian Guldan Naqash Vase",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Tariq Hussain", district: "Baramulla",
-    price: 19200, mrp: 24000, rating: 4.8, reviewCount: 33,
+    price: 890, mrp: 1000, rating: 4.8, reviewCount: 33,
     giId: "GI-JK-PAPR-3155", giLevel: 2,
     purityMetric: "Layered Sakhta Pulp • Hazara Rose & Bulbul Motif",
     loomHours: 175, dimensions: "36 cm H × 18 cm Dia", stock: 5,
@@ -487,7 +444,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-003", title: "Naqash Papier-Mâché Jewellery Box",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Manzoor Naqash", district: "Srinagar",
-    price: 8500, mrp: 11000, rating: 4.7, reviewCount: 86,
+    price: 680, mrp: 850, rating: 4.7, reviewCount: 86,
     giId: "GI-JK-PAPR-3171", giLevel: 2,
     purityMetric: "Sakhta Pulp • Squirrel-Hair Brush Florals",
     loomHours: 85, dimensions: "22 cm × 15 cm × 9 cm", stock: 9,
@@ -498,7 +455,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-004", title: "Thousand Flowers Ceiling Pendant",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Ali Mohammad", district: "Srinagar",
-    price: 32000, mrp: 40000, rating: 4.9, reviewCount: 27,
+    price: 980, mrp: 1000, rating: 4.9, reviewCount: 27,
     giId: "GI-JK-PAPR-3188", giLevel: 3,
     purityMetric: "Layered Sakhta Pulp • Hazara 1000-Flower All-Over",
     loomHours: 320, dimensions: "45 cm Dia × 25 cm H", stock: 3,
@@ -509,7 +466,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-005", title: "Chinar Leaf Papier-Mâché Plate",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Fatima Naqash", district: "Srinagar",
-    price: 6200, mrp: 8000, rating: 4.6, reviewCount: 112,
+    price: 620, mrp: 780, rating: 4.6, reviewCount: 112,
     giId: "GI-JK-PAPR-3204", giLevel: 1,
     purityMetric: "Sakhta Pulp • Five-Lobed Chinar Leaf Form",
     loomHours: 55, dimensions: "30 cm Dia", stock: 14,
@@ -520,7 +477,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-006", title: "Golden Shikar Hunting Scene Box",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Muzaffar Naqash", district: "Srinagar",
-    price: 24500, mrp: 30000, rating: 4.8, reviewCount: 41,
+    price: 920, mrp: 1000, rating: 4.8, reviewCount: 41,
     giId: "GI-JK-PAPR-3221", giLevel: 2,
     purityMetric: "Multi-Layer Sakhta • Gold Leaf Hunting Scene",
     loomHours: 240, dimensions: "28 cm × 20 cm × 12 cm", stock: 4,
@@ -531,7 +488,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-007", title: "Bird of Paradise Lamp Base",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Rafiq Naqashband", district: "Srinagar",
-    price: 28000, mrp: 35000, rating: 4.8, reviewCount: 36,
+    price: 950, mrp: 1000, rating: 4.8, reviewCount: 36,
     giId: "GI-JK-PAPR-3238", giLevel: 2,
     purityMetric: "Sakhta Pulp • Paradise Bird & Blossom Motif",
     loomHours: 270, dimensions: "42 cm H × 16 cm Dia", stock: 4,
@@ -542,7 +499,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-008", title: "Papier-Mâché Chess Set",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Tariq Hussain", district: "Baramulla",
-    price: 18000, mrp: 22500, rating: 4.7, reviewCount: 49,
+    price: 880, mrp: 995, rating: 4.7, reviewCount: 49,
     giId: "GI-JK-PAPR-3255", giLevel: 2,
     purityMetric: "Sakhta Moulded Pieces • Hand-Painted Mughal Set",
     loomHours: 180, dimensions: "40 cm × 40 cm Board Set", stock: 5,
@@ -553,7 +510,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-009", title: "Crescent Moon Wall Mask",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Zeenat Naqash", district: "Srinagar",
-    price: 11500, mrp: 14500, rating: 4.6, reviewCount: 68,
+    price: 740, mrp: 920, rating: 4.6, reviewCount: 68,
     giId: "GI-JK-PAPR-3272", giLevel: 1,
     purityMetric: "Sakhta Pulp • Hand-Moulded Crescent & Star",
     loomHours: 100, dimensions: "35 cm × 20 cm", stock: 7,
@@ -564,7 +521,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-010", title: "Miniature Dal Lake Houseboat",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Javid Naqash", district: "Srinagar",
-    price: 15500, mrp: 19500, rating: 4.8, reviewCount: 57,
+    price: 820, mrp: 980, rating: 4.8, reviewCount: 57,
     giId: "GI-JK-PAPR-3289", giLevel: 2,
     purityMetric: "Sakhta Moulded • Dal Lake Houseboat Miniature",
     loomHours: 145, dimensions: "30 cm × 12 cm × 15 cm", stock: 6,
@@ -575,7 +532,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-011", title: "Floral Naqash Coaster Set",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Hameeda Naqash", district: "Srinagar",
-    price: 4800, mrp: 6200, rating: 4.5, reviewCount: 134,
+    price: 560, mrp: 720, rating: 4.5, reviewCount: 134,
     giId: "GI-JK-PAPR-3306", giLevel: 1,
     purityMetric: "Sakhta Pulp • Floral Naqash Set of 6",
     loomHours: 40, dimensions: "10 cm Dia (Set of 6)", stock: 20,
@@ -586,7 +543,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-012", title: "Peacock Feather Earrings (Papier-Mâché)",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Nasreen Naqash", district: "Srinagar",
-    price: 2800, mrp: 3800, rating: 4.6, reviewCount: 198,
+    price: 500, mrp: 650, rating: 4.6, reviewCount: 198,
     giId: "GI-JK-PAPR-3323", giLevel: 1,
     purityMetric: "Micro Sakhta Moulded • Peacock Feather Eye",
     loomHours: 20, dimensions: "6 cm Length (Pair)", stock: 25,
@@ -597,7 +554,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-013", title: "Naqash Floral Picture Frame",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Muzaffar Naqash", district: "Srinagar",
-    price: 7200, mrp: 9200, rating: 4.6, reviewCount: 77,
+    price: 640, mrp: 800, rating: 4.6, reviewCount: 77,
     giId: "GI-JK-PAPR-3340", giLevel: 1,
     purityMetric: "Sakhta Pulp Frame • Hand-Painted Floral Border",
     loomHours: 65, dimensions: "25 cm × 20 cm (5×7 print)", stock: 11,
@@ -608,7 +565,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-014", title: "Royal Blue Perfume Bottle",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Ali Mohammad", district: "Srinagar",
-    price: 9500, mrp: 12000, rating: 4.7, reviewCount: 90,
+    price: 710, mrp: 890, rating: 4.7, reviewCount: 90,
     giId: "GI-JK-PAPR-3357", giLevel: 2,
     purityMetric: "Sakhta Pulp • Lapis Blue & Gold Naqash Perfume Bottle",
     loomHours: 90, dimensions: "18 cm H × 7 cm Dia", stock: 8,
@@ -619,7 +576,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-015", title: "Treetop Humming Bird Panel",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Fatima Naqash", district: "Srinagar",
-    price: 21000, mrp: 26500, rating: 4.8, reviewCount: 43,
+    price: 900, mrp: 1000, rating: 4.8, reviewCount: 43,
     giId: "GI-JK-PAPR-3374", giLevel: 2,
     purityMetric: "Multi-Layer Sakhta • Hummingbird & Chinar Scene",
     loomHours: 200, dimensions: "50 cm × 35 cm", stock: 5,
@@ -630,7 +587,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-016", title: "Papier-Mâché Tissue Box Holder",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Rafiq Naqashband", district: "Srinagar",
-    price: 5500, mrp: 7000, rating: 4.5, reviewCount: 108,
+    price: 590, mrp: 750, rating: 4.5, reviewCount: 108,
     giId: "GI-JK-PAPR-3391", giLevel: 1,
     purityMetric: "Sakhta Pulp • Floral All-Over Tissue Cover",
     loomHours: 45, dimensions: "26 cm × 13 cm × 13 cm", stock: 16,
@@ -641,7 +598,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-017", title: "Mughal Garden Tray",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Manzoor Naqash", district: "Srinagar",
-    price: 13500, mrp: 17000, rating: 4.7, reviewCount: 61,
+    price: 790, mrp: 960, rating: 4.7, reviewCount: 61,
     giId: "GI-JK-PAPR-3408", giLevel: 2,
     purityMetric: "Layered Sakhta • Mughal Charbagh Garden Scene",
     loomHours: 125, dimensions: "40 cm × 28 cm", stock: 7,
@@ -652,7 +609,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-018", title: "Animal Kingdom Papier-Mâché Eggs",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Ustadani Zeenat Naqash", district: "Srinagar",
-    price: 7800, mrp: 10000, rating: 4.6, reviewCount: 73,
+    price: 660, mrp: 840, rating: 4.6, reviewCount: 73,
     giId: "GI-JK-PAPR-3425", giLevel: 1,
     purityMetric: "Sakhta Moulded • Miniature Animal Naqash Eggs",
     loomHours: 60, dimensions: "8 cm H (Set of 5)", stock: 12,
@@ -663,7 +620,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-019", title: "Naqash Floral Wall Clock",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Javid Naqash", district: "Srinagar",
-    price: 12000, mrp: 15500, rating: 4.7, reviewCount: 65,
+    price: 760, mrp: 940, rating: 4.7, reviewCount: 65,
     giId: "GI-JK-PAPR-3442", giLevel: 2,
     purityMetric: "Sakhta Pulp • Full Naqash Floral Dial Face",
     loomHours: 110, dimensions: "35 cm Dia", stock: 8,
@@ -674,7 +631,7 @@ const SEED_PRODUCTS = [
     id: "hl-papr-020", title: "Lacquered Papier-Mâché Pen Stand",
     guild: "papier-mache", guildLabel: "Papier-Mâché Art",
     artisan: "Master Tariq Hussain", district: "Baramulla",
-    price: 4200, mrp: 5500, rating: 4.5, reviewCount: 142,
+    price: 540, mrp: 690, rating: 4.5, reviewCount: 142,
     giId: "GI-JK-PAPR-3459", giLevel: 1,
     purityMetric: "Sakhta Pulp • Lacquer & Rose Motif Desk Stand",
     loomHours: 35, dimensions: "12 cm H × 8 cm Dia", stock: 22,
@@ -1187,8 +1144,8 @@ const AppState = {
     {
       id: "HL-ORD-2026-7814",
       date: "12 Nov 2026",
-      items: [{ title: "Shahi Gulab-dan Urn", qty: 1, price: 14800, giId: "GI-JK-PAPR-3109" }],
-      total: 14800,
+      items: [{ title: "Shahi Gulab-dan Urn", qty: 1, price: 850, giId: "GI-JK-PAPR-3109" }],
+      total: 850,
       paymentMethod: "UPI Verified Escrow",
       address: "Demo Address, Sample City - 000000",
       stage: 3
@@ -2753,7 +2710,12 @@ function handleSellerLogin(event) {
 }
 
 function updateAuthUI() {
-  const user = AppState.currentUser || loadStorage('hunarlink_auth_user', null);
+  const buyerProfile = loadStorage('hunarlink_buyer_profile', null);
+  const storedAuth = loadStorage('hunarlink_auth_user', null);
+  const user = storedAuth || AppState.currentUser;
+  const buyerFirst = (buyerProfile && buyerProfile.firstName) || (user && user.role !== 'artisan' && user.name ? user.name.split(' ')[0] : 'Priya');
+  const buyerFull = (buyerProfile && buyerProfile.fullName) || (user && user.fullName) || 'Priya Sharma';
+  const buyerBadge = (buyerProfile && buyerProfile.badge) || (user && user.badge) || 'PS';
 
   const avatarBtn = document.getElementById('profile-menu-btn');
   const nameEl = document.querySelector('.profile-menu-name');
@@ -2765,8 +2727,8 @@ function updateAuthUI() {
   const signoutBtn = document.getElementById('btn-profile-signout');
 
   if (user && user.isLoggedIn) {
-    if (avatarBtn) avatarBtn.textContent = user.badge || (user.name ? user.name[0] : '👤');
-    if (nameEl) nameEl.textContent = user.name || 'Collector';
+    if (avatarBtn) avatarBtn.textContent = user.role === 'artisan' ? (user.badge || 'UM') : buyerBadge;
+    if (nameEl) nameEl.textContent = user.role === 'artisan' ? (user.name || 'Artisan') : buyerFull;
     if (roleEl) roleEl.textContent = user.title || (user.role === 'artisan' ? 'Master Artisan' : 'Valley Collector');
     if (signoutBtn) signoutBtn.style.display = 'flex';
 
@@ -2779,34 +2741,36 @@ function updateAuthUI() {
           sellerBtn.innerHTML = '<span>✦</span> Studio Active';
         }
         sellerBtn.classList.add('logged-in');
-        sellerBtn.style.backgroundColor = 'var(--forest-900)';
+        sellerBtn.style.backgroundColor = 'var(--btn-orange)';
         sellerBtn.style.color = '#FFFFFF';
-        sellerBtn.title = `Logged in as ${user.name} (Artisan). Click to open Studio Workspace`;
+        sellerBtn.title = `Logged in as ${user.name} (Artisan). Click to open Seller Portal`;
       }
 
       if (userBtn) {
         if (userText) {
-          userText.textContent = 'Priya';
+          userText.textContent = buyerFirst;
         } else {
-          userBtn.innerHTML = '<span>👤</span> Priya';
+          userBtn.innerHTML = `<span>👤</span> ${buyerFirst}`;
         }
         userBtn.classList.add('logged-in');
-        userBtn.title = 'View Orders & Collector Profile';
+        userBtn.style.backgroundColor = '';
+        userBtn.style.color = '';
+        userBtn.style.borderColor = '';
+        userBtn.title = 'Open User Profile & Account Settings';
       }
     } else {
       // Collector / Profile state
-      const firstName = user.name ? user.name.split(' ')[0] : 'Priya';
       if (userBtn) {
         if (userText) {
-          userText.textContent = firstName;
+          userText.textContent = buyerFirst;
         } else {
-          userBtn.innerHTML = `<span>👤</span> ${firstName}`;
+          userBtn.innerHTML = `<span>👤</span> ${buyerFirst}`;
         }
         userBtn.classList.add('logged-in');
-        userBtn.style.backgroundColor = '#EAF5EE';
-        userBtn.style.color = '#155B33';
-        userBtn.style.borderColor = '#B7DBC3';
-        userBtn.title = `Profile: ${user.name}. Click to view Orders & Tracking`;
+        userBtn.style.backgroundColor = '';
+        userBtn.style.color = '';
+        userBtn.style.borderColor = '';
+        userBtn.title = `Profile: ${buyerFull}. Click to customize profile & track orders`;
       }
 
       if (sellerBtn) {
@@ -2823,19 +2787,23 @@ function updateAuthUI() {
     }
   } else {
     // Guest / Logged out state
-    if (avatarBtn) avatarBtn.textContent = 'PS';
-    if (nameEl) nameEl.textContent = 'Priya Sharma';
+    if (avatarBtn) avatarBtn.textContent = buyerBadge;
+    if (nameEl) nameEl.textContent = buyerFull;
     if (roleEl) roleEl.textContent = 'Verified Valley Collector • J&K';
     if (signoutBtn) signoutBtn.style.display = 'none';
 
     if (userBtn) {
+      const label = (buyerProfile && buyerProfile.isLoggedIn === false) ? 'User Login' : buyerFirst;
       if (userText) {
-        userText.textContent = 'Priya';
+        userText.textContent = label;
       } else {
-        userBtn.innerHTML = '<span>👤</span> Priya';
+        userBtn.innerHTML = `<span>👤</span> ${label}`;
       }
-      userBtn.classList.add('logged-in');
-      userBtn.title = 'View Orders & Collector Profile';
+      userBtn.classList.toggle('logged-in', !(buyerProfile && buyerProfile.isLoggedIn === false));
+      userBtn.style.backgroundColor = '';
+      userBtn.style.color = '';
+      userBtn.style.borderColor = '';
+      userBtn.title = 'Open User Account & Profile';
     }
 
     if (sellerBtn) {
@@ -2854,10 +2822,11 @@ function updateAuthUI() {
 }
 
 function handleUserLoginClick() {
-  if (typeof openOrdersModal === 'function') {
-    openOrdersModal();
+  const buyerProfile = loadStorage('hunarlink_buyer_profile', null);
+  if (buyerProfile && buyerProfile.isLoggedIn === false) {
+    window.location.href = 'user-portal/login.html';
   } else {
-    window.location.href = 'hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section';
+    window.location.href = 'user-portal/profile.html';
   }
 }
 
@@ -3090,3 +3059,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+

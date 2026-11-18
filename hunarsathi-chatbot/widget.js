@@ -46,7 +46,7 @@
       return "HunarLink protects every purchase with UPI/Card Escrow and Verify-on-Delivery (COD) Escrow — you can scan the physical GI QR tag at your doorstep before payment release. Track all 5 stages (Confirmed → GI Seal Verified → Packed at Loom → Insured Transit → Delivered) anytime from your profile Orders modal.";
     }
     if (/walnut|papier|mache|mâché|silk|rug|carpet|sozni|kani/i.test(q)) {
-      return "HunarLink curates 5 Heritage Craft Guilds direct from J&K workshops with 100% artisan payout:\n• Pashmina & Kani Shawls (₹1,050–₹1,980)\n• Walnut Woodcarving (Anantnag seasoned walnut, e.g., Openwork Chinar Chest ₹14,800)\n• Papier-Mâché Art (24K gold leaf Naqash)\n• Silk-on-Silk Rugs (up to 900 knots/sq.in)\n• Kani Jamawar & Sozni Needlework";
+      return "HunarLink curates 5 Heritage Craft Guilds direct from J&K workshops with 100% artisan payout:\n• Pashmina & Kani Shawls (₹1,050–₹1,980)\n• Walnut Woodcarving (Anantnag seasoned walnut, e.g., Openwork Chinar Chest ₹14,800)\n• Papier-Mâché Art (₹500–₹980, 24K gold leaf Naqash)\n• Silk-on-Silk Rugs (up to 900 knots/sq.in)\n• Kani Jamawar & Sozni Needlework";
     }
     if (/wholesale|b2b|bulk/i.test(q)) {
       return "HunarLink's B2B Hospitality Trade Desk offers direct guild pricing with tiered discounts (12% for 10+ units, 18% for 25+, 25% for 50+) and batch GI export seals. Click 'Wholesale' in the top navigation bar to generate an instant quote.";

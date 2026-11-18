@@ -28,6 +28,15 @@
   --border-mid: #CFC9B8;
   --danger-600: #C93B2B;
   --success-600: #1B7A4E;
+  /* Warm Saffron Orange Buttons & Terracotta-Sienna Headings Theme */
+  --btn-orange: #E05A17;
+  --btn-orange-hover: #C2480C;
+  --btn-orange-dark: #9E3808;
+  --btn-orange-soft: #FFF1E6;
+  --btn-orange-border: #F4C4A1;
+  --heading-color: #9A3412;
+  --heading-accent: #C84B11;
+  --heading-on-dark: #FFB46B;
   --shadow-sm: 0 2px 8px rgba(17, 42, 32, 0.05);
   --shadow-md: 0 8px 24px rgba(17, 42, 32, 0.08);
   --shadow-lg: 0 18px 42px rgba(17, 42, 32, 0.14);
@@ -3162,4 +3171,138 @@ button {
     border: 1px solid #000;
     max-height: none;
   }
+}
+
+/* ==========================================================================
+   Global Saffron Orange Buttons, Terracotta Headings & Portrait Framing
+   ========================================================================== */
+h1, h2, h3, h4,
+.brand-title,
+.hero-title,
+.section-title,
+.verify-step-title,
+.verify-detail-heading,
+.product-title,
+.drawer-title,
+.footer-col-title,
+.auth-welcome-title,
+.auth-guarantee-heading {
+  color: var(--heading-color);
+}
+
+.hero-title em {
+  color: var(--btn-orange);
+}
+
+.section-kicker,
+.hero-overline,
+.verify-detail-kicker {
+  color: var(--heading-accent);
+}
+
+.b2b-title,
+.verify-quick-title,
+.auth-headline,
+.auth-headline-accent,
+.site-footer .brand-title,
+.site-footer .footer-col-title,
+.guild-card-title,
+.bento-name {
+  color: var(--heading-on-dark);
+}
+
+/* Portrait-friendly framing so character faces stay centered nicely */
+.product-img-wrap img,
+.guild-bento-card img,
+.bento-card img {
+  object-position: center 20%;
+}
+
+/* Saffron Orange Buttons */
+.btn-primary-forest,
+.btn-artisan-studio,
+.btn-acquire,
+.btn-gold,
+.auth-submit-btn,
+.verify-quick-btn,
+.verify-nav-btn.primary,
+.verify-pill-badge.active,
+.cat-pill-btn.active,
+.badge-counter,
+.badge-counter.gold {
+  background-color: var(--btn-orange);
+  border-color: var(--btn-orange);
+  color: #FFFFFF;
+}
+
+.btn-primary-forest:hover,
+.btn-artisan-studio:hover,
+.btn-acquire:hover,
+.btn-gold:hover,
+.auth-submit-btn:hover,
+.verify-quick-btn:hover,
+.verify-nav-btn.primary:hover:not(:disabled),
+.cat-pill-btn:hover:not(.active) {
+  background-color: var(--btn-orange-hover);
+  border-color: var(--btn-orange-hover);
+  color: #FFFFFF;
+}
+
+.btn-outline-ivory,
+.verify-nav-btn,
+.btn-seller-login,
+.btn-user-login {
+  border-color: var(--btn-orange-border);
+  color: var(--heading-color);
+}
+
+.btn-outline-ivory:hover,
+.verify-nav-btn:hover:not(:disabled),
+.btn-seller-login:hover,
+.btn-user-login:hover {
+  background-color: var(--btn-orange);
+  border-color: var(--btn-orange);
+  color: #FFFFFF;
+}
+
+.btn-user-login.logged-in {
+  background-color: var(--btn-orange-soft);
+  color: var(--heading-color);
+  border-color: var(--btn-orange-border);
+}
+
+.snav-item.active {
+  color: var(--heading-color);
+}
+
+.snav-item.active::after,
+.verify-meter-fill,
+.verify-meter-fill.gold {
+  background-color: var(--btn-orange);
+}
+
+.verify-step-card.highlighted {
+  border-color: var(--btn-orange);
+}
+
+.verify-step-card.highlighted .verify-step-num,
+.verify-step-card.highlighted .verify-step-tag {
+  color: var(--heading-color);
+}
+
+.verify-step-card.highlighted .verify-step-tag {
+  background-color: var(--btn-orange-soft);
+}
+
+.verify-sample-chip:hover {
+  background-color: var(--btn-orange);
+  border-color: var(--btn-orange);
+  color: #FFFFFF;
+}
+
+.brand-emblem,
+.profile-avatar-btn {
+  background-color: var(--btn-orange);
+  color: #FFFFFF;
+  border-color: #FFBE86;
 }

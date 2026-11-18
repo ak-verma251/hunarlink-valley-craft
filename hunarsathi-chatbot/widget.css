@@ -525,3 +525,45 @@
     bottom: 72px;
   }
 }
+
+/* Saffron Orange Buttons & Warm Terracotta-Gold Heading Overrides */
+.hs-bot-name {
+  color: #FFB46B;
+}
+
+.hs-launcher-inner {
+  background: linear-gradient(135deg, #E05A17 0%, #C2480C 100%);
+  color: #FFFFFF;
+}
+
+.hunarsathi-launcher-avatar {
+  background: #FFF3E6;
+  color: #9A3412;
+}
+
+.hs-send-btn,
+.hs-send-inner {
+  background: #E05A17;
+  color: #FFFFFF;
+}
+
+.hs-send-btn:hover:not(:disabled) .hs-send-inner {
+  background: #C2480C;
+}
+
+.hs-msg.user {
+  background: #E05A17;
+  color: #FFFFFF;
+}
+
+.hs-chip {
+  border-color: #F4C4A1;
+  color: #9A3412;
+}
+
+.hs-chip:hover {
+  background:
+    linear-gradient(#E05A17, #E05A17) padding-box,
+    var(--hs-gemini-conic) border-box;
+  color: #FFFFFF;
+}

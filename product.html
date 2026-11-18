@@ -114,6 +114,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 20%;
       display: block;
       transition: transform 0.25s ease-out;
     }
@@ -274,7 +275,7 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2.65rem;
       font-weight: 700;
-      color: #112A20;
+      color: #9A3412;
       line-height: 1.15;
       margin: 4px 0 6px;
     }
@@ -438,9 +439,9 @@
 
     .btn-pdp-buy-now {
       flex: 1.25;
-      background-color: #112A20;
+      background-color: #E05A17;
       color: #FFFFFF;
-      border: 2px solid #112A20;
+      border: 2px solid #E05A17;
       border-radius: 10px;
       height: 52px;
       font-size: 0.92rem;
@@ -453,21 +454,21 @@
       justify-content: center;
       gap: 10px;
       transition: all 0.2s ease;
-      box-shadow: 0 4px 14px rgba(17, 42, 32, 0.2);
+      box-shadow: 0 4px 14px rgba(224, 90, 23, 0.28);
     }
 
     .btn-pdp-buy-now:hover {
-      background-color: #0B1E16;
-      border-color: #0B1E16;
+      background-color: #C2480C;
+      border-color: #C2480C;
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(17, 42, 32, 0.28);
+      box-shadow: 0 8px 20px rgba(224, 90, 23, 0.36);
     }
 
     .btn-pdp-add-cart {
       flex: 1;
-      background-color: #FFFFFF;
-      color: #112A20;
-      border: 2px solid #112A20;
+      background-color: #FFF3E8;
+      color: #9A3412;
+      border: 2px solid #E05A17;
       border-radius: 10px;
       height: 52px;
       font-size: 0.92rem;
@@ -483,7 +484,8 @@
     }
 
     .btn-pdp-add-cart:hover {
-      background-color: #F4F8F5;
+      background-color: #E05A17;
+      color: #FFFFFF;
       transform: translateY(-1px);
     }
 
@@ -551,8 +553,12 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2.1rem;
       font-weight: 700;
-      color: #112A20;
+      color: #9A3412;
       line-height: 1.15;
+    }
+
+    .pdp-artisan-fullname {
+      color: #9A3412;
     }
 
     .pdp-clear-recent-btn {
@@ -700,6 +706,18 @@
               <div class="profile-menu-name">Priya Sharma</div>
               <div class="profile-menu-role">Verified Valley Collector • J&amp;K</div>
             </div>
+            <a href="user-portal/profile.html" class="profile-menu-item" style="text-decoration: none;">
+              <span>👤 My Profile (Customize)</span>
+              <span>→</span>
+            </a>
+            <a href="user-portal/orders.html" class="profile-menu-item" style="text-decoration: none;">
+              <span>📦 My Orders &amp; Live Tracking</span>
+              <span>→</span>
+            </a>
+            <a href="user-portal/login.html" class="profile-menu-item" style="text-decoration: none;">
+              <span>🔐 User Login / Switch Account</span>
+              <span>→</span>
+            </a>
             <a href="auth.html?mode=login&amp;role=artisan" class="profile-menu-item" style="text-decoration: none;">
               <span>🔨 Artisan &amp; Seller Portal</span>
               <span>→</span>
@@ -708,10 +726,6 @@
               <span>✨ Register as an Artisan</span>
               <span>→</span>
             </a>
-            <button type="button" class="profile-menu-item" onclick="openOrdersModal()">
-              <span>📦 My Orders &amp; Live Tracking</span>
-              <span>→</span>
-            </button>
             <button type="button" class="profile-menu-item" onclick="toggleDrawer('wishlist-drawer', true)">
               <span>♡ Saved Heirloom Wishlist</span>
               <span>→</span>
@@ -1229,19 +1243,43 @@
       let thumbs;
       if (p.id === "hl-waln-001") {
         thumbs = [
-          { label: "Full Chest", img: "assets/products/walnut_chest_hero.jpg" },
+          { label: "Editorial View", img: "assets/products/walnut_01.jpg" },
           { label: "Carving Detail", img: "assets/products/thumb_detail.jpg" },
           { label: "Workshop", img: "assets/products/thumb_workshop.jpg" },
           { label: "Artisan", img: "assets/products/thumb_artisan.jpg" },
           { label: "Certificate", img: "assets/products/thumb_cert.jpg" }
         ];
+      } else if (p.guild === "pashmina") {
+        thumbs = [
+          { label: "Draped Look", img: p.image },
+          { label: "Weave Detail", img: "assets/products/pashmina_detail.jpg" },
+          { label: "Full Styling", img: "assets/products/pashmina_02.jpg" },
+          { label: "Kani Border", img: "assets/products/kani_03.jpg" },
+          { label: "GI Certificate", img: "assets/products/thumb_cert.jpg" }
+        ];
+      } else if (p.guild === "kani" || p.guild === "sozni") {
+        thumbs = [
+          { label: "Model View", img: "assets/products/kani_01.jpg" },
+          { label: "Draped Style", img: "assets/products/kani_02.jpg" },
+          { label: "Weave Detail", img: "assets/products/kani_03.jpg" },
+          { label: "Border Detail", img: "assets/products/kani_04.jpg" },
+          { label: "Full Spread", img: "assets/products/kani_05.jpg" }
+        ];
+      } else if (p.guild === "papier-mache") {
+        thumbs = [
+          { label: "Craft View", img: p.image },
+          { label: "Naqash Urn", img: p.image === "assets/products/papier_01.jpg" ? "assets/products/papier_02.jpg" : "assets/products/papier_01.jpg" },
+          { label: "Chinar Box", img: "assets/products/papier_03.jpg" },
+          { label: "Gold Leaf Art", img: "assets/products/papier_05.jpg" },
+          { label: "GI Certificate", img: "assets/products/thumb_cert.jpg" }
+        ];
       } else {
         thumbs = [
-          { label: p.guild === "walnut" ? "Full Chest" : "Full View", img: p.image },
-          { label: p.guild === "walnut" ? "Carving Detail" : (p.guild === "silk-rugs" ? "Knot Detail" : "Weave Detail"), img: p.image },
-          { label: "Workshop", img: "assets/image_2.jpg" },
-          { label: "Artisan", img: "assets/image_1.jpg" },
-          { label: "Certificate", img: "assets/image_6.jpg" }
+          { label: p.guild === "walnut" ? "Editorial View" : "Full View", img: p.image },
+          { label: p.guild === "walnut" ? "Carving Detail" : (p.guild === "silk-rugs" ? "Knot Detail" : "Craft Detail"), img: p.image },
+          { label: "Styling View", img: "assets/image_1.jpg" },
+          { label: "Heritage Look", img: "assets/image_6.jpg" },
+          { label: "GI Certificate", img: "assets/products/thumb_cert.jpg" }
         ];
       }
 

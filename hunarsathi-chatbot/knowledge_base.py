@@ -24,8 +24,9 @@ HUNARLINK_KNOWLEDGE = """
    - Crafted from 5-year cured seasoned Kashmiri Juglans Regia walnut timber in Anantnag & Srinagar clusters.
    - Example: Openwork Chinar Lattice Walnut Chest — ₹14,800 (MRP ₹21,500) | GI #JK-WNT-1180 | Fayaz Ahmad Wani, Anantnag.
 3. Papier-Mâché Art (20 products):
+   - Price Range: ₹500 to ₹980 (MRPs up to ₹1,000)
    - Hand-molded Sakhta pulp vessels illuminated with 24K gold leaf Naqash & mineral pigments from Zadibal & Budgam workshops.
-   - Example: Shahi Gulab-dan Urn — ₹14,800 | GI-JK-PAPR-3109.
+   - Example: Shahi Gulab-dan Urn — ₹850 (MRP ₹990) | GI-JK-PAPR-3109.
 4. Silk-on-Silk Rugs (20 products):
    - Hand-knotted mulberry silk carpets (up to 900 knots/sq.in) woven with traditional Talim notation in Srinagar & Budgam.
 5. Kani Jamawar & Sozni (20 products):
@@ -38,7 +39,7 @@ Every craft passes 3 transparent authenticity steps before leaving J&K:
 - Step 03 — GI Tag & Laser Seal (GI Tag & QR Seal): Approved crafts receive a tamper-proof Government Geographical Indication (GI) laser seal and scannable Digital Craft Passport. Buyers can verify any GI code anytime using the "Verify GI Tag" lookup on HunarLink (e.g., GI-JK-PASH-8821, GI #JK-WNT-1180, GI-JK-PAPR-3109).
 
 === BUYER FEATURES, PAYMENTS, SHIPPING & ORDERS ===
-- Shopping & Checkout: Buyers can search by craft, artisan, or GI ID; filter by category, price (from ₹1,000+), rating, GI tier, and district; save items to Wishlist; compare crafts; and checkout in 4 steps.
+- Shopping & Checkout: Buyers can search by craft, artisan, or GI ID; filter by category, price (from ₹500+), rating, GI tier, and district; save items to Wishlist; compare crafts; and checkout in 4 steps.
 - Payment Protection: UPI Verified Escrow, Card Escrow, and Insured Verify-on-Delivery (COD) Escrow — buyers can scan and verify the physical GI QR tag at their doorstep before payment release.
 - 5-Stage Live Order Tracking:
   1. Order Confirmed
