@@ -80,15 +80,16 @@
 
     /* Main Showcase Grid */
     .pdp-showcase-container {
-      max-width: 1320px;
-      margin: 36px auto;
-      padding: 0 24px;
+      width: 100%;
+      max-width: min(1440px, 95vw);
+      margin: clamp(18px, 3vw, 38px) auto;
+      padding: 0 clamp(12px, 2.4vw, 28px);
     }
 
     .pdp-showcase-grid {
       display: grid;
       grid-template-columns: 1.05fr 1fr;
-      gap: 48px;
+      gap: clamp(24px, 3.6vw, 52px);
       align-items: start;
     }
 
@@ -521,9 +522,10 @@
     /* Below Product Sections (Suggestions & Recent) */
     .pdp-suggestions-section,
     .pdp-recent-section {
-      max-width: 1320px;
-      margin: 64px auto 0;
-      padding: 48px 24px 0;
+      width: 100%;
+      max-width: min(1440px, 95vw);
+      margin: clamp(36px, 5vw, 64px) auto 0;
+      padding: clamp(28px, 4vw, 48px) clamp(12px, 2.4vw, 28px) 0;
       border-top: 1px solid #E8E2D5;
     }
 
@@ -579,16 +581,55 @@
       margin-top: 80px;
     }
 
+    @media (min-width: 1680px) {
+
+      .pdp-showcase-container,
+      .pdp-suggestions-section,
+      .pdp-recent-section {
+        max-width: min(1600px, 90vw);
+      }
+    }
+
     @media (max-width: 980px) {
       .pdp-showcase-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
+
       .pdp-gallery-col {
         position: static;
       }
+
       .pdp-nav-links {
         display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pdp-stage-box {
+        aspect-ratio: 1 / 1;
+      }
+
+      .pdp-thumbs-row {
+        grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+        gap: 8px;
+      }
+
+      .pdp-specs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdp-trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pdp-cta-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pdp-section-h2 {
+        font-size: clamp(1.45rem, 6vw, 1.9rem);
       }
     }
   </style>
@@ -599,7 +640,8 @@
   <!-- Sticky Main Header (Compulsory - Matches Reference Image) -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="brand-logo" id="brand-home-trigger" style="text-decoration: none;">
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="brand-logo"
+        id="brand-home-trigger" style="text-decoration: none;">
         <span class="brand-emblem">H</span>
         <span class="brand-text-wrap">
           <span class="brand-title">HunarLink</span>
@@ -617,7 +659,8 @@
           <input type="text" id="global-search-input" class="header-search-input"
             placeholder="Search craft, artisan, GI ID..."
             onkeydown="if(event.key==='Enter')location.href='hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html?q='+encodeURIComponent(this.value)">
-          <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear Search" onclick="this.previousElementSibling.value=''; this.classList.remove('visible');">✕</button>
+          <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Clear Search"
+            onclick="this.previousElementSibling.value=''; this.classList.remove('visible');">✕</button>
         </div>
       </div>
 
@@ -657,16 +700,12 @@
               <div class="profile-menu-name">Priya Sharma</div>
               <div class="profile-menu-role">Verified Valley Collector • J&amp;K</div>
             </div>
-            <a href="auth.html?mode=login&amp;role=buyer" class="profile-menu-item" style="text-decoration: none;">
-              <span>🛍️ Buyer / Collector Login</span>
-              <span>→</span>
-            </a>
             <a href="auth.html?mode=login&amp;role=artisan" class="profile-menu-item" style="text-decoration: none;">
               <span>🔨 Artisan &amp; Seller Portal</span>
               <span>→</span>
             </a>
-            <a href="auth.html?mode=register&amp;role=buyer" class="profile-menu-item" style="text-decoration: none;">
-              <span>✨ Create New Account</span>
+            <a href="auth.html?mode=register&amp;role=artisan" class="profile-menu-item" style="text-decoration: none;">
+              <span>✨ Register as an Artisan</span>
               <span>→</span>
             </a>
             <button type="button" class="profile-menu-item" onclick="openOrdersModal()">
@@ -685,7 +724,8 @@
               <span>↺ Reset Demo Catalog</span>
               <span>→</span>
             </button>
-            <button type="button" class="profile-menu-item" id="btn-profile-signout" onclick="logoutUser()" style="color: #D32F2F; border-top: 1px solid var(--border-light);">
+            <button type="button" class="profile-menu-item" id="btn-profile-signout" onclick="logoutUser()"
+              style="color: #D32F2F; border-top: 1px solid var(--border-light);">
               <span>🚪 Sign Out</span>
               <span>→</span>
             </button>
@@ -698,11 +738,16 @@
   <!-- Secondary Section Navigation Bar (Centered - Matches Reference Image) -->
   <nav class="section-nav-bar" id="section-nav-bar" aria-label="Section Navigation">
     <div class="container section-nav-inner">
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="snav-item active" id="snav-home">Home</a>
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#craft-guilds-section" class="snav-item" id="snav-artisans">Our Artisans</a>
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#verification-section" class="snav-item" id="snav-verify">Valley Verification Flow</a>
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section" class="snav-item" id="snav-store">J&amp;K Heritage Store</a>
-      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#b2b-wholesale-section" class="snav-item" id="snav-wholesale">Wholesale</a>
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="snav-item active"
+        id="snav-home">Home</a>
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#craft-guilds-section"
+        class="snav-item" id="snav-artisans">Our Artisans</a>
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#verification-section"
+        class="snav-item" id="snav-verify">Valley Verification Flow</a>
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section"
+        class="snav-item" id="snav-store">J&amp;K Heritage Store</a>
+      <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#b2b-wholesale-section"
+        class="snav-item" id="snav-wholesale">Wholesale</a>
     </div>
   </nav>
 
@@ -710,10 +755,12 @@
   <div class="pdp-breadcrumb-bar">
     <div class="container pdp-breadcrumb-inner">
       <div class="pdp-bc-left">
-        <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="pdp-back-arrow" title="Back to Marketplace">←</a>
+        <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html" class="pdp-back-arrow"
+          title="Back to Marketplace">←</a>
         <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html">HOME</a>
         <span>/</span>
-        <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section">EXPLORE CRAFTS</a>
+        <a href="hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section">EXPLORE
+          CRAFTS</a>
         <span>/</span>
         <strong class="pdp-bc-current" id="pdp-bc-title">OPENWORK CHINAR WALNUT CHEST</strong>
       </div>
@@ -732,7 +779,8 @@
           <div class="pdp-stage-top-pill" id="pdp-stage-gi-pill">
             🛡️ GI #JK-WNT-1180 • WALNUT REGISTRY
           </div>
-          <button type="button" class="pdp-stage-wish-btn" id="pdp-stage-wish-btn" onclick="pdpToggleWishlist()" aria-label="Toggle Wishlist">
+          <button type="button" class="pdp-stage-wish-btn" id="pdp-stage-wish-btn" onclick="pdpToggleWishlist()"
+            aria-label="Toggle Wishlist">
             <span id="pdp-stage-wish-icon">♡</span>
           </button>
           <img id="pdp-main-image" src="" alt="Product Showcase" class="pdp-hero-img">
@@ -783,7 +831,8 @@
 
         <!-- Narrative Description -->
         <p class="pdp-narrative" id="pdp-narrative">
-          Single-block seasoned Kashmiri walnut root chest chiseled with intricate chinar leaf openwork and traditional jali patterns, finished with natural beeswax polish.
+          Single-block seasoned Kashmiri walnut root chest chiseled with intricate chinar leaf openwork and traditional
+          jali patterns, finished with natural beeswax polish.
         </p>
 
         <!-- Specifications 2x2 Grid -->
@@ -809,7 +858,7 @@
         <!-- Flipkart-Style 2 Action Buttons -->
         <div class="pdp-cta-row">
           <button type="button" class="btn-pdp-buy-now" id="btn-pdp-buy-now" onclick="pdpHandleBuyNow()">
-            <span>👜</span> ACQUIRE TO COLLECTION (BUY NOW)
+            <span>👜</span>BUY NOW
           </button>
           <button type="button" class="btn-pdp-add-cart" id="btn-pdp-add-cart" onclick="pdpHandleAddToCart()">
             <span>🛍️</span> ADD TO SHOPPING BAG
@@ -865,7 +914,8 @@
   <!-- Footer -->
   <footer class="pdp-footer">
     <div class="container text-center" style="font-size: 0.82rem; color: #9AB2A4;">
-      <p style="margin-bottom: 8px;">HunarLink — Valley Craft Guild • Team 16 • Jammu &amp; Kashmir Handicrafts Network</p>
+      <p style="margin-bottom: 8px;">HunarLink — Valley Craft Guild • Team 16 • Jammu &amp; Kashmir Handicrafts Network
+      </p>
       <p>© 2026 HunarLink. Direct Artisan Fair-Trade • Govt Geographical Indication Registry Authentication.</p>
     </div>
   </footer>
@@ -951,12 +1001,16 @@
         <button type="button" class="drawer-close-btn" onclick="closeModal('artisan-studio-modal')">✕</button>
       </div>
       <div class="modal-body">
-        <div style="background-color: var(--forest-50); border: 1px dashed var(--forest-600); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <div
+          style="background-color: var(--forest-50); border: 1px dashed var(--forest-600); border-radius: var(--radius-md); padding: 12px 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
           <div>
-            <div style="font-size: 0.76rem; font-weight: 700; color: var(--forest-900); text-transform: uppercase;">Direct Loom Onboarding Suite</div>
-            <div style="font-size: 0.76rem; color: var(--forest-700);">Multi-lingual voice listing assistant &amp; GI tag minting protocol</div>
+            <div style="font-size: 0.76rem; font-weight: 700; color: var(--forest-900); text-transform: uppercase;">
+              Direct Loom Onboarding Suite</div>
+            <div style="font-size: 0.76rem; color: var(--forest-700);">Multi-lingual voice listing assistant &amp; GI
+              tag minting protocol</div>
           </div>
-          <button type="button" class="btn-primary-forest" onclick="simulateVoiceAutoFill()" style="font-size: 0.72rem; padding: 6px 12px;">🎙️ Voice Auto-Fill</button>
+          <button type="button" class="btn-primary-forest" onclick="simulateVoiceAutoFill()"
+            style="font-size: 0.72rem; padding: 6px 12px;">🎙️ Voice Auto-Fill</button>
         </div>
         <form onsubmit="handleStudioListingSubmit(event)">
           <div class="form-grid">
@@ -1005,7 +1059,8 @@
             </div>
           </div>
           <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 10px;">
-            <button type="button" class="btn-outline-forest" onclick="closeModal('artisan-studio-modal')">Cancel</button>
+            <button type="button" class="btn-outline-forest"
+              onclick="closeModal('artisan-studio-modal')">Cancel</button>
             <button type="submit" class="btn-primary-forest">Publish to J&amp;K Heritage Store →</button>
           </div>
         </form>
@@ -1014,7 +1069,8 @@
   </div>
 
   <!-- Seller Login Modal -->
-  <div class="backdrop-overlay" id="seller-login-modal" onclick="if(event.target===this)closeModal('seller-login-modal')">
+  <div class="backdrop-overlay" id="seller-login-modal"
+    onclick="if(event.target===this)closeModal('seller-login-modal')">
     <div class="modal-card auth-modal-card">
       <div class="auth-modal-grid">
         <div class="auth-banner-pane">
@@ -1025,7 +1081,8 @@
             </div>
             <div class="auth-provenance-kicker">— AUTHENTIC PROVENANCE</div>
             <h2 class="auth-headline">Every Craft<br><span class="auth-headline-accent">Has a Story.</span></h2>
-            <p class="auth-description">Discover verified Kashmiri craftsmanship—from loom-woven shawls to intricate Sozni stitches—and directly connect with the master artisans behind every creation.</p>
+            <p class="auth-description">Discover verified Kashmiri craftsmanship—from loom-woven shawls to intricate
+              Sozni stitches—and directly connect with the master artisans behind every creation.</p>
           </div>
           <div class="auth-banner-bottom">
             <div class="auth-evaluator-header">
@@ -1033,30 +1090,33 @@
               <span class="auth-evaluator-sub">One-tap demo</span>
             </div>
             <div class="auth-demo-pills-row">
-              <button type="button" class="auth-demo-pill" onclick="quickFillAuth('buyer')">● Buyer Demo: Priya Sharma</button>
-              <button type="button" class="auth-demo-pill" onclick="quickFillAuth('artisan')">● Artisan Demo: Ustad Mir</button>
+              <button type="button" class="auth-demo-pill" onclick="quickFillAuth('artisan')">● Artisan Demo: Ustad
+                Mir</button>
             </div>
           </div>
         </div>
         <div class="auth-form-pane">
           <button type="button" class="auth-modal-close-btn" onclick="closeModal('seller-login-modal')">✕</button>
-          <a href="auth.html?mode=login&amp;role=artisan" style="display: flex; align-items: center; justify-content: space-between; background: #FAF7F0; border: 1px solid #D5CBB9; border-radius: 8px; padding: 7px 12px; margin-bottom: 12px; font-size: 0.76rem; font-weight: 700; color: #112A20; text-decoration: none;">
+          <a href="auth.html?mode=login&amp;role=artisan"
+            style="display: flex; align-items: center; justify-content: space-between; background: #FAF7F0; border: 1px solid #D5CBB9; border-radius: 8px; padding: 7px 12px; margin-bottom: 12px; font-size: 0.76rem; font-weight: 700; color: #112A20; text-decoration: none;">
             <span>🚀 Prefer full-screen portal view?</span>
             <span style="color: #195C38;">Open Auth Suite ↗</span>
           </a>
-          <div class="auth-form-kicker">PATRON &amp; ARTISAN ACCESS</div>
-          <h3 class="auth-welcome-title">Welcome</h3>
-          <p class="auth-welcome-sub">Sign in to continue your authentic HunarLink journey.</p>
+          <div class="auth-form-kicker">ARTISAN &amp; SELLER ACCESS</div>
+          <h3 class="auth-welcome-title">Welcome, Artisan</h3>
+          <p class="auth-welcome-sub">Sign in to access your HunarLink Artisan Studio workspace.</p>
           <form onsubmit="handleSellerLogin(event)">
             <div class="auth-field-group">
               <label class="auth-field-label">Email Address</label>
-              <input type="email" id="auth-email" class="auth-text-input" placeholder="e.g. name@domain.com" required style="border: 1px solid #D2DDD4; border-radius: 10px; padding: 10px 14px;">
+              <input type="email" id="auth-email" class="auth-text-input" placeholder="e.g. name@domain.com" required
+                style="border: 1px solid #D2DDD4; border-radius: 10px; padding: 10px 14px;">
             </div>
             <div class="auth-field-group">
               <label class="auth-field-label">Password</label>
-              <input type="password" id="auth-password" class="auth-text-input" placeholder="••••••••••••" required style="border: 1px solid #D2DDD4; border-radius: 10px; padding: 10px 14px;">
+              <input type="password" id="auth-password" class="auth-text-input" placeholder="••••••••••••" required
+                style="border: 1px solid #D2DDD4; border-radius: 10px; padding: 10px 14px;">
             </div>
-            <button type="submit" class="auth-submit-btn" style="margin-top: 14px;">Sign In to HunarLink →</button>
+            <button type="submit" class="auth-submit-btn" style="margin-top: 14px;">Sign In as Master Artisan →</button>
           </form>
         </div>
       </div>
@@ -1115,7 +1175,7 @@
       // Details Column
       document.getElementById("pdp-title").textContent = p.title;
       document.getElementById("pdp-subtitle").textContent = `${p.guildLabel} Heritage Kashmiri Masterpiece`;
-      
+
       // Technique tags
       const techTag = document.getElementById("pdp-tag-technique");
       if (techTag) {

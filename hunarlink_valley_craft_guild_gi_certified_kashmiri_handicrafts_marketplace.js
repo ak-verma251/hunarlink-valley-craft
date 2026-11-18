@@ -21,7 +21,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-001", title: "Royal Khudrang Pashmina Shawl",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Ghulam Qadir Mir", district: "Srinagar",
-    price: 58500, mrp: 68000, rating: 4.9, reviewCount: 42,
+    price: 1650, mrp: 1990, rating: 4.9, reviewCount: 42,
     giId: "GI-JK-PASH-8821", giLevel: 3,
     purityMetric: "14.2 Micron Changthangi Fleece • 100% Hand-Spun",
     loomHours: 420, dimensions: "205 cm × 102 cm", stock: 4,
@@ -32,7 +32,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-002", title: "Jamawar Heirloom Stole",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Ghulam Qadir Mir", district: "Srinagar",
-    price: 76000, mrp: 89000, rating: 4.9, reviewCount: 37,
+    price: 1850, mrp: 1999, rating: 4.9, reviewCount: 37,
     giId: "GI-JK-PASH-8810", giLevel: 3,
     purityMetric: "14.5 Micron Changthangi • Natural Indigo & Madder Dyes",
     loomHours: 980, dimensions: "200 cm × 100 cm", stock: 3,
@@ -43,7 +43,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-003", title: "Natural Ivory Ring Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustadani Zareena Bano", district: "Srinagar",
-    price: 42000, mrp: 52000, rating: 4.8, reviewCount: 28,
+    price: 1320, mrp: 1650, rating: 4.8, reviewCount: 28,
     giId: "GI-JK-PASH-8830", giLevel: 3,
     purityMetric: "13.8 Micron • Passes Through Finger Ring",
     loomHours: 360, dimensions: "200 cm × 98 cm", stock: 5,
@@ -54,7 +54,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-004", title: "Sozni Floral Pashmina Wrap",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Nazir Ahmad Wani", district: "Srinagar",
-    price: 64000, mrp: 78000, rating: 4.9, reviewCount: 33,
+    price: 1540, mrp: 1890, rating: 4.9, reviewCount: 33,
     giId: "GI-JK-PASH-8845", giLevel: 3,
     purityMetric: "14.1 Micron • Full-Body Sozni Needle Embroidery",
     loomHours: 650, dimensions: "205 cm × 100 cm", stock: 3,
@@ -65,7 +65,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-005", title: "Moonlit Shahtoosh-Grade Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Bashir Ahmad Lone", district: "Budgam",
-    price: 95000, mrp: 115000, rating: 5.0, reviewCount: 21,
+    price: 1920, mrp: 2000, rating: 5.0, reviewCount: 21,
     giId: "GI-JK-PASH-8862", giLevel: 3,
     purityMetric: "13.5 Micron Ultra-Fine • Moonlight Transparency Test",
     loomHours: 1100, dimensions: "210 cm × 105 cm", stock: 2,
@@ -76,7 +76,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-006", title: "Badam Paisley Reversible Stole",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Farida Akhtar", district: "Pulwama",
-    price: 38500, mrp: 47000, rating: 4.7, reviewCount: 44,
+    price: 1180, mrp: 1490, rating: 4.7, reviewCount: 44,
     giId: "GI-JK-PASH-8877", giLevel: 2,
     purityMetric: "14.8 Micron • Double-Faced Reversible Weave",
     loomHours: 320, dimensions: "200 cm × 100 cm", stock: 6,
@@ -87,7 +87,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-007", title: "Crimson Kani-Border Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Mohammad Yusuf", district: "Srinagar",
-    price: 82000, mrp: 98000, rating: 4.8, reviewCount: 26,
+    price: 1790, mrp: 1995, rating: 4.8, reviewCount: 26,
     giId: "GI-JK-PASH-8891", giLevel: 3,
     purityMetric: "14.0 Micron • 60-Bobbin Kani Border",
     loomHours: 760, dimensions: "205 cm × 102 cm", stock: 3,
@@ -98,7 +98,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-008", title: "Sage Green Twill Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustadani Hameeda Begum", district: "Kupwara",
-    price: 29500, mrp: 36000, rating: 4.6, reviewCount: 51,
+    price: 1090, mrp: 1390, rating: 4.6, reviewCount: 51,
     giId: "GI-JK-PASH-8903", giLevel: 2,
     purityMetric: "15.2 Micron • 2×2 Twill Weave Structure",
     loomHours: 220, dimensions: "200 cm × 98 cm", stock: 8,
@@ -109,7 +109,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-009", title: "Chinar Leaf Embossed Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Rafiq Ahmad Shah", district: "Baramulla",
-    price: 44000, mrp: 54000, rating: 4.8, reviewCount: 39,
+    price: 1420, mrp: 1750, rating: 4.8, reviewCount: 39,
     giId: "GI-JK-PASH-8914", giLevel: 2,
     purityMetric: "14.3 Micron • Jamdani Supplementary Weft Chinar",
     loomHours: 480, dimensions: "202 cm × 100 cm", stock: 4,
@@ -120,7 +120,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-010", title: "Midnight Blue Zari Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Shabir Ahmad", district: "Srinagar",
-    price: 71000, mrp: 86000, rating: 4.9, reviewCount: 30,
+    price: 1680, mrp: 1980, rating: 4.9, reviewCount: 30,
     giId: "GI-JK-PASH-8929", giLevel: 3,
     purityMetric: "14.1 Micron • Pure Silver Zari Thread Accents",
     loomHours: 820, dimensions: "205 cm × 102 cm", stock: 3,
@@ -131,7 +131,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-011", title: "Papier-Mâché Printed Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Manzoor Hussain", district: "Srinagar",
-    price: 36000, mrp: 44000, rating: 4.7, reviewCount: 46,
+    price: 1240, mrp: 1550, rating: 4.7, reviewCount: 46,
     giId: "GI-JK-PASH-8937", giLevel: 2,
     purityMetric: "14.6 Micron • Hand Block-Printed Natural Pigment",
     loomHours: 290, dimensions: "200 cm × 100 cm", stock: 5,
@@ -142,7 +142,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-012", title: "Gold Embroidered Bridal Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustadani Ruksana Naqshbandi", district: "Srinagar",
-    price: 125000, mrp: 150000, rating: 5.0, reviewCount: 17,
+    price: 1980, mrp: 2000, rating: 5.0, reviewCount: 17,
     giId: "GI-JK-PASH-8945", giLevel: 3,
     purityMetric: "13.9 Micron • 24K Gold Zari Embroidery",
     loomHours: 1600, dimensions: "210 cm × 108 cm", stock: 1,
@@ -153,7 +153,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-013", title: "Pheran-Style Quilted Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Gulam Hassan", district: "Anantnag",
-    price: 48000, mrp: 58000, rating: 4.7, reviewCount: 35,
+    price: 1490, mrp: 1820, rating: 4.7, reviewCount: 35,
     giId: "GI-JK-PASH-8958", giLevel: 2,
     purityMetric: "14.4 Micron • Kashmiri Pheran Quilted Lining",
     loomHours: 510, dimensions: "120 cm × 90 cm (Quilted)", stock: 4,
@@ -164,7 +164,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-014", title: "Forest Green Herringbone Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Firdous Ahmad", district: "Budgam",
-    price: 32000, mrp: 39000, rating: 4.6, reviewCount: 58,
+    price: 1150, mrp: 1450, rating: 4.6, reviewCount: 58,
     giId: "GI-JK-PASH-8966", giLevel: 2,
     purityMetric: "15.0 Micron • Herringbone Twill Structure",
     loomHours: 240, dimensions: "200 cm × 98 cm", stock: 7,
@@ -175,7 +175,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-015", title: "Lotus Pink Sozni Shawl",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustadani Fatima Zargar", district: "Pulwama",
-    price: 56000, mrp: 68000, rating: 4.8, reviewCount: 32,
+    price: 1590, mrp: 1920, rating: 4.8, reviewCount: 32,
     giId: "GI-JK-PASH-8974", giLevel: 3,
     purityMetric: "14.2 Micron • Lotus & Vine Sozni Field Embroidery",
     loomHours: 590, dimensions: "205 cm × 100 cm", stock: 4,
@@ -186,7 +186,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-016", title: "Undyed Raw Changthangi Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Abdul Majid", district: "Leh-Ladakh",
-    price: 68000, mrp: 82000, rating: 4.9, reviewCount: 23,
+    price: 1740, mrp: 1990, rating: 4.9, reviewCount: 23,
     giId: "GI-JK-PASH-8982", giLevel: 3,
     purityMetric: "13.7 Micron Undyed • Direct Nomad Changthangi Source",
     loomHours: 700, dimensions: "210 cm × 105 cm", stock: 2,
@@ -197,7 +197,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-017", title: "Striped Regency Pashmina Stole",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Tariq Wani", district: "Srinagar",
-    price: 27500, mrp: 34000, rating: 4.5, reviewCount: 67,
+    price: 1050, mrp: 1350, rating: 4.5, reviewCount: 67,
     giId: "GI-JK-PASH-8990", giLevel: 1,
     purityMetric: "15.5 Micron • Natural Plant-Dyed Stripes",
     loomHours: 180, dimensions: "200 cm × 90 cm", stock: 10,
@@ -208,7 +208,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-018", title: "Shaheen Eagle Kani Pashmina",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustad Nazir Ahmad Bhat", district: "Srinagar",
-    price: 110000, mrp: 132000, rating: 5.0, reviewCount: 19,
+    price: 1890, mrp: 1999, rating: 5.0, reviewCount: 19,
     giId: "GI-JK-PASH-8998", giLevel: 3,
     purityMetric: "13.6 Micron • Full Kani Eagle Motif Field Weave",
     loomHours: 1420, dimensions: "210 cm × 105 cm", stock: 2,
@@ -219,7 +219,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-019", title: "Copper Autumn Pashmina Shawl",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Ustadani Nasreen Zargar", district: "Shopian",
-    price: 34000, mrp: 42000, rating: 4.7, reviewCount: 41,
+    price: 1290, mrp: 1599, rating: 4.7, reviewCount: 41,
     giId: "GI-JK-PASH-9006", giLevel: 2,
     purityMetric: "14.7 Micron • Pomegranate Rind Natural Dye",
     loomHours: 270, dimensions: "200 cm × 100 cm", stock: 6,
@@ -230,7 +230,7 @@ const SEED_PRODUCTS = [
     id: "hl-pash-020", title: "Diamond Weave Pashmina Throw",
     guild: "pashmina", guildLabel: "Pashmina & Kani Guild",
     artisan: "Master Javid Ahmad", district: "Budgam",
-    price: 39000, mrp: 48000, rating: 4.8, reviewCount: 36,
+    price: 1380, mrp: 1699, rating: 4.8, reviewCount: 36,
     giId: "GI-JK-PASH-9014", giLevel: 2,
     purityMetric: "14.4 Micron • Diamond Geometric Weave Structure",
     loomHours: 310, dimensions: "190 cm × 140 cm (Throw)", stock: 5,
@@ -1216,7 +1216,13 @@ const AppState = {
 };
 
 function getAllProducts() {
-  return [...AppState.customProducts, ...SEED_PRODUCTS];
+  const custom = loadStorage("hunarlink_custom_products", AppState.customProducts || []);
+  const overrides = loadStorage("hunarlink_product_overrides", {});
+  const merged = [...custom, ...SEED_PRODUCTS].map(p => {
+    const ov = overrides && overrides[p.id];
+    return ov ? { ...p, ...ov } : p;
+  });
+  return merged.filter(p => p.status !== "paused");
 }
 
 function getProductById(id) {
@@ -1371,15 +1377,6 @@ function setCategoryFilter(guildKey, scrollToGrid = false) {
     const el = document.getElementById("marketplace-section");
     if (el) el.scrollIntoView({ behavior: "smooth" });
   }
-}
-
-function filterByMasterUstad() {
-  AppState.filters.guild = "all";
-  AppState.filters.artisan = "Master Ghulam Qadir Mir";
-  renderMarketplace();
-  const el = document.getElementById("marketplace-section");
-  if (el) el.scrollIntoView({ behavior: "smooth" });
-  showToast("Filtered catalog to Master Ghulam Qadir Mir's loom creations");
 }
 
 function resetAllFilters() {
@@ -2097,18 +2094,62 @@ function saveNewCheckoutAddress(e) {
 function completeSimulatedOrder(paymentMethod) {
   const totals = calculateCartTotals();
   const addr = AppState.addresses.find(a => a.id === AppState.selectedAddressId) || AppState.addresses[0];
+  const buyerNameInput = (document.getElementById("chk-buyer-name")?.value || "").trim();
+  const buyerPhoneInput = (document.getElementById("chk-buyer-phone")?.value || "").trim();
+  const now = new Date();
+  const dateStr = now.toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" });
+  const timeStr = now.toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" });
   const orderId = "HL-ORD-2026-" + Math.floor(1000 + Math.random() * 9000);
+
+  const buyerName = buyerNameInput || addr.name || "Priya Sharma";
+  const buyerPhone = buyerPhoneInput || addr.phone || "+91 98110 44210";
+  const buyerEmail = (AppState.currentUser && AppState.currentUser.email) || "collector@hunarlink.in";
+
+  const orderItems = AppState.cart.map(entry => {
+    const p = getProductById(entry.productId);
+    return {
+      productId: p.id,
+      title: p.title,
+      qty: entry.qty,
+      price: p.price,
+      lineTotal: p.price * entry.qty,
+      giId: p.giId,
+      artisan: p.artisan,
+      guild: p.guildLabel || p.guild,
+      image: p.image
+    };
+  });
+
   const newOrder = {
     id: orderId,
-    date: "15 Nov 2026",
-    items: AppState.cart.map(entry => {
-      const p = getProductById(entry.productId);
-      return { title: p.title, qty: entry.qty, price: p.price, giId: p.giId };
-    }),
+    date: dateStr,
+    time: timeStr,
+    createdAt: now.toISOString(),
+    buyer: {
+      name: buyerName,
+      phone: buyerPhone,
+      email: buyerEmail,
+      addressType: addr.type || "Home",
+      locality: addr.locality || "",
+      city: addr.city || "",
+      pincode: addr.pincode || "",
+      fullAddress: `${addr.name}, ${addr.locality}, ${addr.city} - ${addr.pincode}`
+    },
+    items: orderItems,
+    subtotal: totals.subtotal,
+    discount: totals.discount || 0,
+    couponCode: AppState.appliedCoupon ? AppState.appliedCoupon.code : null,
+    shippingFee: totals.shipping || 0,
     total: totals.netPayable,
+    artisanPayout: totals.netPayable,
     paymentMethod,
+    paymentStatus: paymentMethod.toLowerCase().includes("cod") || paymentMethod.toLowerCase().includes("delivery")
+      ? "Verify-on-Delivery Escrow"
+      : "Paid (Escrow Protected)",
     address: `${addr.name}, ${addr.locality}, ${addr.city} - ${addr.pincode}`,
-    stage: 2
+    stage: 1,
+    sellerNote: "",
+    isNewForSeller: true
   };
 
   AppState.orders.unshift(newOrder);
@@ -2120,7 +2161,7 @@ function completeSimulatedOrder(paymentMethod) {
   updateHeaderBadges();
   closeModal("checkout-modal");
   openOrdersModal();
-  showToast(`Order ${orderId} confirmed! GI Ownership Certificate generated.`);
+  showToast(`Order ${orderId} confirmed! Seller notified with complete order details.`);
 }
 
 function renderCheckoutStep() {
@@ -2314,12 +2355,27 @@ function runGiLookup() {
   const inp = document.getElementById("gi-lookup-input");
   const res = document.getElementById("gi-lookup-result");
   if (!inp || !res) return;
-  const code = inp.value.trim().toUpperCase();
-  const match = getAllProducts().find(p => p.giId.toUpperCase() === code) || getAllProducts()[0];
+  const raw = inp.value.trim();
+  const normalize = s => s.toUpperCase().replace(/[\s#-]/g, "");
+  const codeNorm = normalize(raw);
+  const all = getAllProducts();
+  const match = raw
+    ? all.find(p => normalize(p.giId) === codeNorm || normalize(p.giId).includes(codeNorm))
+    : all[0];
+
+  if (!match) {
+    res.innerHTML = `
+      <div style="background: #FFF8EB; border: 1px solid #E8C988; border-radius: 8px; padding: 14px; margin-top: 12px; color: #734D0D; font-size: 0.82rem;">
+        <strong>⚠️ No matching GI record found for "${raw}".</strong><br>
+        Double-check the tag code or try a verified sample like <code>GI-JK-PASH-8821</code>, <code>GI #JK-WNT-1180</code>, or <code>GI-JK-PAPR-3109</code>.
+      </div>
+    `;
+    return;
+  }
 
   res.innerHTML = `
     <div style="background: var(--forest-50); border: 1px solid var(--forest-700); border-radius: 8px; padding: 14px; margin-top: 12px;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 6px;">
         <span style="font-weight: 700; color: var(--forest-900);">✓ CRYPTOGRAPHIC GI SEAL VERIFIED</span>
         <code style="background: var(--forest-900); color: var(--gold-400); padding: 2px 8px; border-radius: 4px;">${match.giId}</code>
       </div>
@@ -2332,6 +2388,154 @@ function runGiLookup() {
     </div>
   `;
 }
+
+/* ==========================================================================
+   Interactive Valley Verification Flow Controller
+   ========================================================================== */
+const VERIFICATION_STEPS = {
+  1: {
+    kicker: "STEP 01 OF 03 • LOOM ORIGIN CHECK",
+    heading: "How We Verify the Artisan & Workshop",
+    checks: [
+      "Every craft is photographed and logged at the artisan's actual workshop in Srinagar, Budgam, or Anantnag.",
+      "We verify the artisan's Government of J&K Handicrafts Registry ID and family guild lineage.",
+      "Exact GPS coordinates and loom hours are recorded so middlemen cannot swap in factory copies."
+    ],
+    proofTitle: "Sample Origin Record",
+    proofBadge: "GPS VERIFIED",
+    proof: [
+      { label: "Master Artisan", value: "Ustad Ghulam Qadir Mir" },
+      { label: "Workshop Cluster", value: "Kanihama, Budgam (J&K)" },
+      { label: "Guild Registry", value: "JK-HANDLOOM #019" },
+      { label: "Crafting Time", value: "1,420 Hand-Loom Hours" }
+    ]
+  },
+  2: {
+    kicker: "STEP 02 OF 03 • CERTIFIED LAB TESTING",
+    heading: "How We Test Fiber & Material Purity",
+    checks: [
+      "Microscopic fiber testing confirms authentic Ladakhi Changthangi Pashmina (under 16 microns — 5x finer than human hair).",
+      "AI macro weave inspection verifies hand-spun irregularity, real mulberry silk knot density, and seasoned walnut wood grain.",
+      "Natural mineral and vegetable dyes are checked to ensure heirloom longevity and skin-safe comfort."
+    ],
+    proofTitle: "Sample Lab Purity Report",
+    proofBadge: "99.4% PURE",
+    proof: [
+      { label: "Fiber Diameter", value: "14.2 Microns (µm)" },
+      { label: "Weave Type", value: "100% Hand-Spun Kani" },
+      { label: "Synthetic Blends", value: "0.0% Detected (Pass)" },
+      { label: "Testing Authority", value: "Pashmina Testing & Quality Lab" }
+    ]
+  },
+  3: {
+    kicker: "STEP 03 OF 03 • LIFETIME BUYER PROTECTION",
+    heading: "How Your GI Tag & Digital Passport Work",
+    checks: [
+      "Once approved, a tamper-evident Government Geographical Indication (GI) laser seal is attached to the craft.",
+      "Each seal links to a permanent Digital Craft Passport storing the artisan profile, origin map, and lab certificate.",
+      "Simply scan the QR code or enter the GI ID anytime — even years later — to prove authenticity and heirloom value."
+    ],
+    proofTitle: "Sample Digital Passport",
+    proofBadge: "GI SEALED",
+    proof: [
+      { label: "GI Certificate ID", value: "GI-JK-PASH-8821" },
+      { label: "Seal Type", value: "Tamper-Proof Laser QR" },
+      { label: "Registry Status", value: "Active • Govt. GI #46" },
+      { label: "Buyer Guarantee", value: "100% Authenticity Refund" }
+    ]
+  }
+};
+
+let activeVerificationStep = 1;
+
+function selectVerificationStep(step) {
+  const s = Math.max(1, Math.min(3, Number(step) || 1));
+  activeVerificationStep = s;
+
+  // Sync top pills & cards
+  [1, 2, 3].forEach(n => {
+    const pill = document.getElementById(`verify-pill-${n}`);
+    const card = document.getElementById(`verify-card-${n}`);
+    const tag = document.getElementById(`verify-tag-${n}`);
+    const isActive = n === s;
+    const isDone = n < s;
+
+    if (pill) {
+      pill.classList.toggle("active", isActive);
+      pill.classList.toggle("completed", isDone);
+      pill.setAttribute("aria-selected", isActive ? "true" : "false");
+    }
+    if (card) {
+      card.classList.toggle("highlighted", isActive);
+      card.classList.toggle("completed", isDone);
+      card.setAttribute("aria-pressed", isActive ? "true" : "false");
+    }
+    if (tag) {
+      tag.textContent = isActive ? "Viewing Step" : isDone ? "✓ Checked" : "Click to Inspect";
+    }
+  });
+
+  // Render interactive step detail content
+  const data = VERIFICATION_STEPS[s];
+  const contentEl = document.getElementById("verify-detail-content");
+  if (contentEl && data) {
+    contentEl.innerHTML = `
+      <div class="verify-detail-grid">
+        <div>
+          <div class="verify-detail-kicker">${data.kicker}</div>
+          <h3 class="verify-detail-heading">${data.heading}</h3>
+          <ul class="verify-checklist">
+            ${data.checks.map(c => `<li><span class="verify-check-icon">✓</span><span>${c}</span></li>`).join("")}
+          </ul>
+        </div>
+        <div class="verify-sample-proof">
+          <div class="verify-proof-header">
+            <span class="verify-proof-title">${data.proofTitle}</span>
+            <span class="verify-proof-badge">${data.proofBadge}</span>
+          </div>
+          <div class="verify-proof-rows">
+            ${data.proof.map(item => `
+              <div class="verify-proof-item">
+                <strong>${item.label}</strong>
+                <span>${item.value}</span>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Sync Previous / Next buttons & counter
+  const counterEl = document.getElementById("verify-step-counter");
+  const prevBtn = document.getElementById("verify-prev-btn");
+  const nextBtn = document.getElementById("verify-next-btn");
+  if (counterEl) counterEl.textContent = `Step ${s} of 3`;
+  if (prevBtn) prevBtn.disabled = s === 1;
+  if (nextBtn) {
+    nextBtn.disabled = false;
+    nextBtn.textContent = s === 3 ? "Restart Flow ↺" : "Next Step →";
+  }
+}
+
+function stepVerification(delta) {
+  if (delta > 0 && activeVerificationStep === 3) {
+    selectVerificationStep(1);
+    return;
+  }
+  selectVerificationStep(activeVerificationStep + delta);
+}
+
+function quickVerifyFromSection(sampleId) {
+  const inlineInput = document.getElementById("inline-gi-input");
+  const code = sampleId || (inlineInput ? inlineInput.value.trim() : "") || "GI-JK-PASH-8821";
+  if (inlineInput && sampleId) inlineInput.value = sampleId;
+  openGiVerifyModal(code);
+}
+
+window.selectVerificationStep = selectVerificationStep;
+window.stepVerification = stepVerification;
+window.quickVerifyFromSection = quickVerifyFromSection;
 
 function openB2BModal() {
   document.getElementById("b2b-modal").classList.add("open");
@@ -2375,16 +2579,6 @@ function submitB2BQuote(e) {
   saveStorage("hunarlink_b2b_quotes", AppState.b2bQuotes);
   closeModal("b2b-modal");
   showToast(`Wholesale Trade Dossier & GI Lot Quote sent for ${firm}`);
-}
-
-function openCommissionModal() {
-  document.getElementById("custom-commission-modal").classList.add("open");
-}
-
-function submitCustomCommission(e) {
-  e.preventDefault();
-  closeModal("custom-commission-modal");
-  showToast("Custom Loom Commission logged with Master Ghulam Qadir Mir's Srinagar workshop");
 }
 
 /* Artisan Studio Seller Listing Simulator */
@@ -2482,46 +2676,38 @@ function closeModal(modalId) {
 }
 
 /* ==========================================================================
-   Seller & Patron Authentication Controller (Matches Reference Image)
+   Seller / Artisan Authentication Controller
    ========================================================================== */
 let currentAuthRole = 'artisan';
 
-function openSellerLoginModal(role = 'artisan') {
-  setAuthRole(role);
+function openSellerLoginModal() {
+  setAuthRole('artisan');
   const modal = document.getElementById('seller-login-modal');
   if (modal) modal.classList.add('open');
 }
 
-function setAuthRole(role) {
-  currentAuthRole = role;
+function setAuthRole() {
+  currentAuthRole = 'artisan';
   const artisanTab = document.getElementById('auth-role-artisan');
-  const buyerTab = document.getElementById('auth-role-buyer');
   const submitBtnText = document.getElementById('auth-submit-btn-text');
-  
-  if (artisanTab && buyerTab) {
-    artisanTab.classList.toggle('active', role === 'artisan');
-    buyerTab.classList.toggle('active', role === 'buyer');
+
+  if (artisanTab) {
+    artisanTab.classList.add('active');
   }
-  
+
   if (submitBtnText) {
-    submitBtnText.textContent = role === 'artisan' ? 'Sign In as Master Artisan' : 'Sign In to HunarLink';
+    submitBtnText.textContent = 'Sign In as Master Artisan';
   }
 }
 
-function quickFillAuth(role) {
-  setAuthRole(role);
+function quickFillAuth() {
+  setAuthRole('artisan');
   const emailInput = document.getElementById('auth-email');
   const passInput = document.getElementById('auth-password');
-  
-  if (role === 'artisan') {
-    if (emailInput) emailInput.value = 'ustad.mir@hunarlink.jk';
-    if (passInput) passInput.value = 'KashmirLoom46!';
-    showToast('⚡ Quick-Filled: Master Artisan Ustad Mir credentials');
-  } else {
-    if (emailInput) emailInput.value = 'priya.sharma@domain.com';
-    if (passInput) passInput.value = 'ValleyCollector2026!';
-    showToast('⚡ Quick-Filled: Collector Priya Sharma credentials');
-  }
+
+  if (emailInput) emailInput.value = 'ustad.mir@hunarlink.jk';
+  if (passInput) passInput.value = 'KashmirLoom46!';
+  showToast('⚡ Quick-Filled: Master Artisan Ustad Mir credentials');
 }
 
 function togglePasswordVisibility() {
@@ -2545,39 +2731,25 @@ function togglePasswordVisibility() {
 function handleSellerLogin(event) {
   if (event) event.preventDefault();
   const email = (document.getElementById('auth-email')?.value || '').trim();
-  const isArtisan = currentAuthRole === 'artisan' || email.includes('artisan') || email.includes('mir') || email.includes('ustad');
-  
-  const authUser = isArtisan
-    ? {
-        role: 'artisan',
-        name: 'Ustad Ghulam Qadir Mir',
-        title: 'Master Artisan • Pashmina & Kani Guild',
-        badge: 'UM',
-        email: email || 'ustad.mir@hunarlink.jk',
-        isLoggedIn: true
-      }
-    : {
-        role: 'buyer',
-        name: 'Priya Sharma',
-        title: 'Verified Valley Collector • New Delhi',
-        badge: 'PS',
-        email: email || 'priya.sharma@domain.com',
-        isLoggedIn: true
-      };
+
+  const authUser = {
+    role: 'artisan',
+    name: 'Ustad Ghulam Qadir Mir',
+    title: 'Master Artisan • Pashmina & Kani Guild',
+    badge: 'UM',
+    email: email || 'ustad.mir@hunarlink.jk',
+    isLoggedIn: true
+  };
 
   AppState.currentUser = authUser;
   saveStorage('hunarlink_auth_user', authUser);
   updateAuthUI();
   closeModal('seller-login-modal');
 
-  if (isArtisan) {
-    showToast('✦ Authenticated as Master Artisan Ustad Mir! Opening Seller Studio...');
-    setTimeout(() => {
-      openArtisanStudioModal();
-    }, 500);
-  } else {
-    showToast('✓ Welcome back, Priya Sharma! Valley Collector privilege active.');
-  }
+  showToast('✦ Authenticated as Master Artisan Ustad Mir! Opening Seller Studio...');
+  setTimeout(() => {
+    openArtisanStudioModal();
+  }, 500);
 }
 
 function updateAuthUI() {
@@ -2614,19 +2786,16 @@ function updateAuthUI() {
 
       if (userBtn) {
         if (userText) {
-          userText.textContent = 'User Login';
+          userText.textContent = 'Priya';
         } else {
-          userBtn.innerHTML = '<span>👤</span> User Login';
+          userBtn.innerHTML = '<span>👤</span> Priya';
         }
-        userBtn.classList.remove('logged-in');
-        userBtn.style.backgroundColor = '';
-        userBtn.style.color = '';
-        userBtn.style.borderColor = '';
-        userBtn.title = 'Switch or log in as Buyer';
+        userBtn.classList.add('logged-in');
+        userBtn.title = 'View Orders & Collector Profile';
       }
     } else {
-      // Logged in as Buyer / User
-      const firstName = user.name ? user.name.split(' ')[0] : 'Collector';
+      // Collector / Profile state
+      const firstName = user.name ? user.name.split(' ')[0] : 'Priya';
       if (userBtn) {
         if (userText) {
           userText.textContent = firstName;
@@ -2637,7 +2806,7 @@ function updateAuthUI() {
         userBtn.style.backgroundColor = '#EAF5EE';
         userBtn.style.color = '#155B33';
         userBtn.style.borderColor = '#B7DBC3';
-        userBtn.title = `Logged in as ${user.name}. Click to view Orders & Profile`;
+        userBtn.title = `Profile: ${user.name}. Click to view Orders & Tracking`;
       }
 
       if (sellerBtn) {
@@ -2654,22 +2823,19 @@ function updateAuthUI() {
     }
   } else {
     // Guest / Logged out state
-    if (avatarBtn) avatarBtn.textContent = '👤';
-    if (nameEl) nameEl.textContent = 'Welcome, Guest';
-    if (roleEl) roleEl.textContent = 'Sign In to HunarLink';
+    if (avatarBtn) avatarBtn.textContent = 'PS';
+    if (nameEl) nameEl.textContent = 'Priya Sharma';
+    if (roleEl) roleEl.textContent = 'Verified Valley Collector • J&K';
     if (signoutBtn) signoutBtn.style.display = 'none';
 
     if (userBtn) {
       if (userText) {
-        userText.textContent = 'User Login';
+        userText.textContent = 'Priya';
       } else {
-        userBtn.innerHTML = '<span>👤</span> User Login';
+        userBtn.innerHTML = '<span>👤</span> Priya';
       }
-      userBtn.classList.remove('logged-in');
-      userBtn.style.backgroundColor = '';
-      userBtn.style.color = '';
-      userBtn.style.borderColor = '';
-      userBtn.title = 'Buyer & Collector Sign In';
+      userBtn.classList.add('logged-in');
+      userBtn.title = 'View Orders & Collector Profile';
     }
 
     if (sellerBtn) {
@@ -2688,26 +2854,17 @@ function updateAuthUI() {
 }
 
 function handleUserLoginClick() {
-  const user = AppState.currentUser || loadStorage('hunarlink_auth_user', null);
-  if (user && user.isLoggedIn && user.role === 'buyer') {
-    if (typeof openOrdersModal === 'function') {
-      openOrdersModal();
-    } else {
-      window.location.href = 'hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section';
-    }
+  if (typeof openOrdersModal === 'function') {
+    openOrdersModal();
   } else {
-    window.location.href = 'auth.html?mode=login&role=buyer';
+    window.location.href = 'hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#marketplace-section';
   }
 }
 
 function handleSellerLoginClick() {
   const user = AppState.currentUser || loadStorage('hunarlink_auth_user', null);
   if (user && user.isLoggedIn && user.role === 'artisan') {
-    if (typeof openArtisanStudioModal === 'function') {
-      openArtisanStudioModal();
-    } else {
-      window.location.href = 'hunarlink_valley_craft_guild_gi_certified_kashmiri_handicrafts_marketplace.html#craft-guilds-section';
-    }
+    window.location.href = 'seller-portal/dashboard.html';
   } else {
     window.location.href = 'auth.html?mode=login&role=artisan';
   }
@@ -2719,7 +2876,7 @@ function logoutUser() {
   } catch (e) {}
   AppState.currentUser = null;
   updateAuthUI();
-  showToast("Logged out of HunarLink.");
+  showToast("Logged out of Artisan Session.");
 }
 
 function handleForgotPassword() {
@@ -2727,7 +2884,7 @@ function handleForgotPassword() {
 }
 
 function handleRegisterClick() {
-  window.location.href = 'auth.html?mode=register&role=buyer';
+  window.location.href = 'auth.html?mode=register&role=artisan';
 }
 
 window.handleUserLoginClick = handleUserLoginClick;
@@ -2784,8 +2941,13 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMarketplace();
   renderCompareBar();
   renderHomeRecentViewed();
+  selectVerificationStep(1);
 
   window.addEventListener("focus", () => {
+    AppState.customProducts = loadStorage("hunarlink_custom_products", AppState.customProducts);
+    AppState.orders = loadStorage("hunarlink_orders", AppState.orders);
+    AppState.reviews = loadStorage("hunarlink_reviews", AppState.reviews);
+    if (typeof renderMarketplace === "function") renderMarketplace();
     if (typeof renderHomeRecentViewed === "function") {
       renderHomeRecentViewed();
     }
